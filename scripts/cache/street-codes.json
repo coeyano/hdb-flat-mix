@@ -1,0 +1,2642 @@
+{
+ "ADD01P": {
+  "postal": "751358",
+  "road": "ADMIRALTY DRIVE"
+ },
+ "ADL01U": {
+  "postal": "750493",
+  "road": "ADMIRALTY LINK"
+ },
+ "ADM00K": {
+  "postal": "732006",
+  "road": "ADMIRALTY ROAD"
+ },
+ "AHH00K": {
+  "postal": "320103",
+  "road": "AH HOOD ROAD"
+ },
+ "AHS00H": {
+  "postal": "530144",
+  "road": "LORONG AH SOO"
+ },
+ "ALA05S": {
+  "postal": "380114",
+  "road": "ALJUNIED AVENUE 2"
+ },
+ "ALC02U": {
+  "postal": "380095",
+  "road": "ALJUNIED CRESCENT"
+ },
+ "ALC04L": {
+  "postal": "341112",
+  "road": "ALKAFF CRESCENT"
+ },
+ "ALJ00Q": {
+  "postal": "380126",
+  "road": "ALJUNIED ROAD"
+ },
+ "ANA02E": {
+  "postal": "560218",
+  "road": "ANG MO KIO AVENUE 1"
+ },
+ "ANA03L": {
+  "postal": "560412",
+  "road": "ANG MO KIO AVENUE 10"
+ },
+ "ANA04L": {
+  "postal": "560259",
+  "road": "ANG MO KIO AVENUE 2"
+ },
+ "ANA05P": {
+  "postal": "560327",
+  "road": "ANG MO KIO AVENUE 3"
+ },
+ "ANA06H": {
+  "postal": "560630",
+  "road": "ANG MO KIO AVENUE 4"
+ },
+ "ANA07B": {
+  "postal": "560154",
+  "road": "ANG MO KIO AVENUE 5"
+ },
+ "ANA08H": {
+  "postal": "560714",
+  "road": "ANG MO KIO AVENUE 6"
+ },
+ "ANA09H": {
+  "postal": "560509",
+  "road": "ANG MO KIO AVENUE 8"
+ },
+ "ANA10L": {
+  "postal": "560627",
+  "road": "ANG MO KIO AVENUE 9"
+ },
+ "ANC04Y": {
+  "postal": "540326",
+  "road": "ANCHORVALE ROAD"
+ },
+ "ANC05U": {
+  "postal": "540338",
+  "road": "ANCHORVALE CRESCENT"
+ },
+ "AND04D": {
+  "postal": "540321",
+  "road": "ANCHORVALE DRIVE"
+ },
+ "ANL03N": {
+  "postal": "543311",
+  "road": "ANCHORVALE LANE"
+ },
+ "ANL04Y": {
+  "postal": "543318",
+  "road": "ANCHORVALE LINK"
+ },
+ "ANS01L": {
+  "postal": "562104",
+  "road": "ANG MO KIO STREET 11"
+ },
+ "ANS02R": {
+  "postal": "561130",
+  "road": "ANG MO KIO STREET 12"
+ },
+ "ANS04R": {
+  "postal": "563246",
+  "road": "ANG MO KIO STREET 21"
+ },
+ "ANS05X": {
+  "postal": "568226",
+  "road": "ANG MO KIO STREET 22"
+ },
+ "ANS06N": {
+  "postal": "560227",
+  "road": "ANG MO KIO STREET 23"
+ },
+ "ANS08K": {
+  "postal": "563315",
+  "road": "ANG MO KIO STREET 31"
+ },
+ "ANS09Q": {
+  "postal": "560350",
+  "road": "ANG MO KIO STREET 32"
+ },
+ "ANS11X": {
+  "postal": "561424",
+  "road": "ANG MO KIO STREET 42"
+ },
+ "ANS12C": {
+  "postal": "560455",
+  "road": "ANG MO KIO STREET 44"
+ },
+ "ANS13Z": {
+  "postal": "561590",
+  "road": "ANG MO KIO STREET 51"
+ },
+ "ANS14L": {
+  "postal": "564588",
+  "road": "ANG MO KIO STREET 52"
+ },
+ "ANS17M": {
+  "postal": "560650",
+  "road": "ANG MO KIO STREET 61"
+ },
+ "ANS27P": {
+  "postal": "541331",
+  "road": "ANCHORVALE STREET"
+ },
+ "ARA04H": {
+  "postal": "431012",
+  "road": "KAMPONG ARANG ROAD"
+ },
+ "AYE02J": {
+  "postal": "382115",
+  "road": "JALAN AYER"
+ },
+ "BAH02L": {
+  "postal": "320043",
+  "road": "JALAN BAHAGIA"
+ },
+ "BAL03N": {
+  "postal": "370031",
+  "road": "BALAM ROAD"
+ },
+ "BAL04S": {
+  "postal": "321002",
+  "road": "BALESTIER ROAD"
+ },
+ "BAN00L": {
+  "postal": "670255",
+  "road": "BANGKIT ROAD"
+ },
+ "BAS02G": {
+  "postal": "180233",
+  "road": "BAIN STREET"
+ },
+ "BAS05U": {
+  "postal": "050005",
+  "road": "BANDA STREET"
+ },
+ "BAT08G": {
+  "postal": "431004",
+  "road": "JALAN BATU"
+ },
+ "BAW02B": {
+  "postal": "362226",
+  "road": "BARTLEY WALK"
+ },
+ "BEA00Y": {
+  "postal": "190002",
+  "road": "BEACH ROAD"
+ },
+ "BEA05R": {
+  "postal": "460423",
+  "road": "BEDOK NORTH AVENUE 1"
+ },
+ "BEA06N": {
+  "postal": "460518",
+  "road": "BEDOK NORTH AVENUE 2"
+ },
+ "BEA07U": {
+  "postal": "460505",
+  "road": "BEDOK NORTH AVENUE 3"
+ },
+ "BEA08R": {
+  "postal": "460101",
+  "road": "BEDOK NORTH AVENUE 4"
+ },
+ "BEA09N": {
+  "postal": "460003",
+  "road": "BEDOK SOUTH AVENUE 1"
+ },
+ "BEA10U": {
+  "postal": "465010",
+  "road": "BEDOK SOUTH AVENUE 2"
+ },
+ "BEA11N": {
+  "postal": "460157",
+  "road": "BEDOK SOUTH AVENUE 3"
+ },
+ "BEC05N": {
+  "postal": "160038",
+  "road": "BEO CRESCENT"
+ },
+ "BEC08N": {
+  "postal": "473747",
+  "road": "BEDOK RESERVOIR CRESCENT"
+ },
+ "BEC09N": {
+  "postal": "463221",
+  "road": "BEDOK CENTRAL"
+ },
+ "BED07K": {
+  "postal": "460222",
+  "road": "BEDOK NORTH DRIVE"
+ },
+ "BEN00L": {
+  "postal": "461431",
+  "road": "BEDOK NORTH ROAD"
+ },
+ "BEN01R": {
+  "postal": "332038",
+  "road": "BENDEMEER ROAD"
+ },
+ "BER00B": {
+  "postal": "470711",
+  "road": "BEDOK RESERVOIR ROAD"
+ },
+ "BER11Z": {
+  "postal": "200025",
+  "road": "JALAN BERSEH"
+ },
+ "BES00D": {
+  "postal": "460420",
+  "road": "BEDOK NORTH STREET 1"
+ },
+ "BES01K": {
+  "postal": "460135",
+  "road": "BEDOK NORTH STREET 2"
+ },
+ "BES02T": {
+  "postal": "460530",
+  "road": "BEDOK NORTH STREET 3"
+ },
+ "BES03D": {
+  "postal": "464188",
+  "road": "BEDOK NORTH STREET 4"
+ },
+ "BES05G": {
+  "postal": "460152",
+  "road": "BEDOK SOUTH ROAD"
+ },
+ "BEV00N": {
+  "postal": "470760",
+  "road": "BEDOK RESERVOIR VIEW"
+ },
+ "BID04Y": {
+  "postal": "363213",
+  "road": "BIDADARI PARK DRIVE"
+ },
+ "BIS04Q": {
+  "postal": "570146",
+  "road": "BISHAN STREET 11"
+ },
+ "BIS05M": {
+  "postal": "570128",
+  "road": "BISHAN STREET 12"
+ },
+ "BIS06N": {
+  "postal": "570167",
+  "road": "BISHAN STREET 13"
+ },
+ "BIS07K": {
+  "postal": "571532",
+  "road": "BISHAN STREET 14"
+ },
+ "BIS09N": {
+  "postal": "570258",
+  "road": "BISHAN STREET 22"
+ },
+ "BIS10Q": {
+  "postal": "570213",
+  "road": "BISHAN STREET 23"
+ },
+ "BIS15M": {
+  "postal": "570279",
+  "road": "BISHAN STREET 24"
+ },
+ "BOA01Y": {
+  "postal": "640183",
+  "road": "BOON LAY AVENUE"
+ },
+ "BOD01D": {
+  "postal": "640267",
+  "road": "BOON LAY DRIVE"
+ },
+ "BOK01Q": {
+  "postal": "330005",
+  "road": "BOON KENG ROAD"
+ },
+ "BOP00F": {
+  "postal": "641212",
+  "road": "BOON LAY PLACE"
+ },
+ "BOT04R": {
+  "postal": "163009",
+  "road": "BOON TIONG ROAD"
+ },
+ "BRD01K": {
+  "postal": "570447",
+  "road": "BRIGHT HILL DRIVE"
+ },
+ "BUA05U": {
+  "postal": "650283",
+  "road": "BUKIT BATOK EAST AVENUE 3"
+ },
+ "BUA06N": {
+  "postal": "650266",
+  "road": "BUKIT BATOK EAST AVENUE 4"
+ },
+ "BUA07K": {
+  "postal": "650245",
+  "road": "BUKIT BATOK EAST AVENUE 5"
+ },
+ "BUA08A": {
+  "postal": "652292",
+  "road": "BUKIT BATOK EAST AVENUE 6"
+ },
+ "BUA09Y": {
+  "postal": "650424",
+  "road": "BUKIT BATOK WEST AVENUE 2"
+ },
+ "BUA11F": {
+  "postal": "650417",
+  "road": "BUKIT BATOK WEST AVENUE 4"
+ },
+ "BUA12U": {
+  "postal": "652435",
+  "road": "BUKIT BATOK WEST AVENUE 5"
+ },
+ "BUA13S": {
+  "postal": "650193",
+  "road": "BUKIT BATOK WEST AVENUE 6"
+ },
+ "BUA14A": {
+  "postal": "650406",
+  "road": "BUKIT BATOK WEST AVENUE 7"
+ },
+ "BUA15B": {
+  "postal": "650431",
+  "road": "BUKIT BATOK WEST AVENUE 8"
+ },
+ "BUA22D": {
+  "postal": "650468",
+  "road": "BUKIT BATOK WEST AVENUE 9"
+ },
+ "BUC02M": {
+  "postal": "650642",
+  "road": "BUKIT BATOK CENTRAL"
+ },
+ "BUC04Y": {
+  "postal": "150165",
+  "road": "BUKIT MERAH CENTRAL"
+ },
+ "BUC11G": {
+  "postal": "533986",
+  "road": "BUANGKOK CRESCENT"
+ },
+ "BUF09A": {
+  "postal": "210661",
+  "road": "BUFFALO ROAD"
+ },
+ "BUG06A": {
+  "postal": "532987",
+  "road": "BUANGKOK GREEN"
+ },
+ "BUL00Q": {
+  "postal": "150121",
+  "road": "BUKIT MERAH LANE 1"
+ },
+ "BUL13G": {
+  "postal": "532994",
+  "road": "BUANGKOK LINK"
+ },
+ "BUM03D": {
+  "postal": "160143",
+  "road": "JALAN BUKIT MERAH"
+ },
+ "BUP05Q": {
+  "postal": "090104",
+  "road": "BUKIT PURMEI ROAD"
+ },
+ "BUR00D": {
+  "postal": "671234",
+  "road": "BUKIT PANJANG RING ROAD"
+ },
+ "BUS02Q": {
+  "postal": "650157",
+  "road": "BUKIT BATOK STREET 11"
+ },
+ "BUS03F": {
+  "postal": "650202",
+  "road": "BUKIT BATOK STREET 21"
+ },
+ "BUS04S": {
+  "postal": "650299",
+  "road": "BUKIT BATOK STREET 22"
+ },
+ "BUS06N": {
+  "postal": "655290",
+  "road": "BUKIT BATOK STREET 24"
+ },
+ "BUS07Q": {
+  "postal": "651289",
+  "road": "BUKIT BATOK STREET 25"
+ },
+ "BUS09S": {
+  "postal": "650368",
+  "road": "BUKIT BATOK STREET 31"
+ },
+ "BUS10K": {
+  "postal": "650332",
+  "road": "BUKIT BATOK STREET 32"
+ },
+ "BUS11Y": {
+  "postal": "650322",
+  "road": "BUKIT BATOK STREET 33"
+ },
+ "BUS12P": {
+  "postal": "650344",
+  "road": "BUKIT BATOK STREET 34"
+ },
+ "BUS13N": {
+  "postal": "650528",
+  "road": "BUKIT BATOK STREET 51"
+ },
+ "BUS14E": {
+  "postal": "650525",
+  "road": "BUKIT BATOK STREET 52"
+ },
+ "BUS22C": {
+  "postal": "160046",
+  "road": "JALAN BUKIT HO SWEE"
+ },
+ "BUS26A": {
+  "postal": "652463",
+  "road": "BUKIT BATOK STREET 41"
+ },
+ "BUV00C": {
+  "postal": "151118",
+  "road": "BUKIT MERAH VIEW"
+ },
+ "CAC07Y": {
+  "postal": "390034",
+  "road": "CASSIA CRESCENT"
+ },
+ "CAC10Y": {
+  "postal": "080011",
+  "road": "CANTONMENT CLOSE"
+ },
+ "CAC12F": {
+  "postal": "751119",
+  "road": "CANBERRA CRESCENT"
+ },
+ "CAD04W": {
+  "postal": "763377",
+  "road": "CANBERRA DRIVE"
+ },
+ "CAL06H": {
+  "postal": "750505",
+  "road": "CANBERRA LINK"
+ },
+ "CAM01K": {
+  "postal": "211041",
+  "road": "CAMBRIDGE ROAD"
+ },
+ "CAN02U": {
+  "postal": "750307",
+  "road": "CANBERRA ROAD"
+ },
+ "CAN04Y": {
+  "postal": "085501",
+  "road": "CANTONMENT ROAD"
+ },
+ "CAS08K": {
+  "postal": "670133",
+  "road": "CASHEW ROAD"
+ },
+ "CAS15J": {
+  "postal": "753102",
+  "road": "CANBERRA STREET"
+ },
+ "CAV02U": {
+  "postal": "750133",
+  "road": "CANBERRA VIEW"
+ },
+ "CAW04A": {
+  "postal": "751115",
+  "road": "CANBERRA WALK"
+ },
+ "CHA00U": {
+  "postal": "461039",
+  "road": "CHAI CHEE AVENUE"
+ },
+ "CHA02K": {
+  "postal": "210668",
+  "road": "CHANDER ROAD"
+ },
+ "CHA41M": {
+  "postal": "681809",
+  "road": "CHOA CHU KANG AVENUE 1"
+ },
+ "CHA42Y": {
+  "postal": "683297",
+  "road": "CHOA CHU KANG AVENUE 2"
+ },
+ "CHA43F": {
+  "postal": "680289",
+  "road": "CHOA CHU KANG AVENUE 3"
+ },
+ "CHA44R": {
+  "postal": "680420",
+  "road": "CHOA CHU KANG AVENUE 4"
+ },
+ "CHA45S": {
+  "postal": "680486",
+  "road": "CHOA CHU KANG AVENUE 5"
+ },
+ "CHA47H": {
+  "postal": "681812",
+  "road": "CHOA CHU KANG AVENUE 7"
+ },
+ "CHC00U": {
+  "postal": "460027",
+  "road": "CHAI CHEE ROAD"
+ },
+ "CHC16G": {
+  "postal": "680350",
+  "road": "CHOA CHU KANG CENTRAL"
+ },
+ "CHC17Y": {
+  "postal": "680656",
+  "road": "CHOA CHU KANG CRESCENT"
+ },
+ "CHD07A": {
+  "postal": "460056",
+  "road": "CHAI CHEE DRIVE"
+ },
+ "CHD08D": {
+  "postal": "681787",
+  "road": "CHOA CHU KANG DRIVE"
+ },
+ "CHL09C": {
+  "postal": "680343",
+  "road": "CHOA CHU KANG LOOP"
+ },
+ "CHN03D": {
+  "postal": "680753",
+  "road": "CHOA CHU KANG NORTH 5"
+ },
+ "CHN04D": {
+  "postal": "680792",
+  "road": "CHOA CHU KANG NORTH 6"
+ },
+ "CHN05D": {
+  "postal": "680617",
+  "road": "CHOA CHU KANG NORTH 7"
+ },
+ "CHS01A": {
+  "postal": "461042",
+  "road": "CHAI CHEE STREET"
+ },
+ "CHS03F": {
+  "postal": "160079",
+  "road": "CHAY YAN STREET"
+ },
+ "CHS11A": {
+  "postal": "160054",
+  "road": "CHIN SWEE ROAD"
+ },
+ "CHS24J": {
+  "postal": "680525",
+  "road": "CHOA CHU KANG STREET 51"
+ },
+ "CHS25Y": {
+  "postal": "681552",
+  "road": "CHOA CHU KANG STREET 52"
+ },
+ "CHS26U": {
+  "postal": "680704",
+  "road": "CHOA CHU KANG STREET 53"
+ },
+ "CHS27B": {
+  "postal": "680768",
+  "road": "CHOA CHU KANG STREET 54"
+ },
+ "CHS28W": {
+  "postal": "681610",
+  "road": "CHOA CHU KANG STREET 62"
+ },
+ "CHS29M": {
+  "postal": "680641",
+  "road": "CHOA CHU KANG STREET 64"
+ },
+ "CHV00F": {
+  "postal": "500005",
+  "road": "CHANGI VILLAGE ROAD"
+ },
+ "CHW08D": {
+  "postal": "731562",
+  "road": "CHAMPIONS WAY"
+ },
+ "CIR01Q": {
+  "postal": "370051",
+  "road": "CIRCUIT ROAD"
+ },
+ "CLA04L": {
+  "postal": "120421",
+  "road": "CLEMENTI AVENUE 1"
+ },
+ "CLA05L": {
+  "postal": "120337",
+  "road": "CLEMENTI AVENUE 2"
+ },
+ "CLA06H": {
+  "postal": "120455",
+  "road": "CLEMENTI AVENUE 3"
+ },
+ "CLA07H": {
+  "postal": "120320",
+  "road": "CLEMENTI AVENUE 4"
+ },
+ "CLA08B": {
+  "postal": "120348",
+  "road": "CLEMENTI AVENUE 5"
+ },
+ "CLA09K": {
+  "postal": "121210",
+  "road": "CLEMENTI AVENUE 6"
+ },
+ "CLL00K": {
+  "postal": "140132",
+  "road": "CLARENCE LANE"
+ },
+ "CLS01D": {
+  "postal": "120108",
+  "road": "CLEMENTI STREET 11"
+ },
+ "CLS02Q": {
+  "postal": "120106",
+  "road": "CLEMENTI STREET 12"
+ },
+ "CLS03T": {
+  "postal": "120112",
+  "road": "CLEMENTI STREET 13"
+ },
+ "CLS04Q": {
+  "postal": "120101",
+  "road": "CLEMENTI STREET 14"
+ },
+ "CLS06Q": {
+  "postal": "120601",
+  "road": "CLEMENTI WEST STREET 1"
+ },
+ "CLS07F": {
+  "postal": "120723",
+  "road": "CLEMENTI WEST STREET 2"
+ },
+ "COA01B": {
+  "postal": "140007",
+  "road": "COMMONWEALTH AVENUE"
+ },
+ "COB00D": {
+  "postal": "541278",
+  "road": "COMPASSVALE BOW"
+ },
+ "COC03N": {
+  "postal": "140086",
+  "road": "COMMONWEALTH CLOSE"
+ },
+ "COC04U": {
+  "postal": "140096",
+  "road": "COMMONWEALTH CRESCENT"
+ },
+ "COC08K": {
+  "postal": "540296",
+  "road": "COMPASSVALE CRESCENT"
+ },
+ "COD00B": {
+  "postal": "140059",
+  "road": "COMMONWEALTH DRIVE"
+ },
+ "COD04N": {
+  "postal": "611184",
+  "road": "CORPORATION DRIVE"
+ },
+ "COD05D": {
+  "postal": "543204",
+  "road": "COMPASSVALE DRIVE"
+ },
+ "COL05F": {
+  "postal": "542205",
+  "road": "COMPASSVALE LANE"
+ },
+ "COL07W": {
+  "postal": "541268",
+  "road": "COMPASSVALE LINK"
+ },
+ "COM00A": {
+  "postal": "543258",
+  "road": "COMPASSVALE ROAD"
+ },
+ "COS09T": {
+  "postal": "540299",
+  "road": "COMPASSVALE STREET"
+ },
+ "COW00F": {
+  "postal": "120414",
+  "road": "COMMONWEALTH AVENUE WEST"
+ },
+ "COW04S": {
+  "postal": "540234",
+  "road": "COMPASSVALE WALK"
+ },
+ "CRL00Q": {
+  "postal": "190466",
+  "road": "CRAWFORD LANE"
+ },
+ "DAC02U": {
+  "postal": "390060",
+  "road": "DAKOTA CRESCENT"
+ },
+ "DAM01K": {
+  "postal": "410666",
+  "road": "JALAN DAMAI"
+ },
+ "DAW00K": {
+  "postal": "141078",
+  "road": "DAWSON ROAD"
+ },
+ "DEA08K": {
+  "postal": "160003",
+  "road": "DELTA AVENUE"
+ },
+ "DEP00N": {
+  "postal": "101106",
+  "road": "DEPOT ROAD"
+ },
+ "DOC00B": {
+  "postal": "130021",
+  "road": "DOVER CRESCENT"
+ },
+ "DOE01D": {
+  "postal": "130012",
+  "road": "DOVER CLOSE EAST"
+ },
+ "DOR01F": {
+  "postal": "211048",
+  "road": "DORSET ROAD"
+ },
+ "DOV00W": {
+  "postal": "130003",
+  "road": "DOVER ROAD"
+ },
+ "DUA02A": {
+  "postal": "391093",
+  "road": "JALAN DUA"
+ },
+ "DUS04X": {
+  "postal": "320106",
+  "road": "JALAN DUSUN"
+ },
+ "EDP01G": {
+  "postal": "822172",
+  "road": "EDGEDALE PLAINS"
+ },
+ "EDP02K": {
+  "postal": "821671",
+  "road": "EDGEFIELD PLAINS"
+ },
+ "EDW00D": {
+  "postal": "821621",
+  "road": "EDGEFIELD WALK"
+ },
+ "ELI00F": {
+  "postal": "510609",
+  "road": "ELIAS ROAD"
+ },
+ "EMP01P": {
+  "postal": "260008",
+  "road": "EMPRESS ROAD"
+ },
+ "ENS00Y": {
+  "postal": "160056",
+  "road": "ENG HOON STREET"
+ },
+ "ENS01B": {
+  "postal": "160066",
+  "road": "ENG WATT STREET"
+ },
+ "EUC01D": {
+  "postal": "400011",
+  "road": "EUNOS CRESCENT"
+ },
+ "EUR01M": {
+  "postal": "400039",
+  "road": "EUNOS ROAD 2"
+ },
+ "EUR04C": {
+  "postal": "400413",
+  "road": "EUNOS ROAD 5"
+ },
+ "EVP00A": {
+  "postal": "080007",
+  "road": "EVERTON PARK"
+ },
+ "FAJ00N": {
+  "postal": "670420",
+  "road": "FAJAR ROAD"
+ },
+ "FAP01K": {
+  "postal": "211014",
+  "road": "FARRER PARK ROAD"
+ },
+ "FAR01K": {
+  "postal": "260005",
+  "road": "FARRER ROAD"
+ },
+ "FEL01D": {
+  "postal": "796400",
+  "road": "FERNVALE LANE"
+ },
+ "FEL02Q": {
+  "postal": "791413",
+  "road": "FERNVALE LINK"
+ },
+ "FER01D": {
+  "postal": "793408",
+  "road": "FERNVALE ROAD"
+ },
+ "FES00D": {
+  "postal": "790472",
+  "road": "FERNVALE STREET"
+ },
+ "FRE00F": {
+  "postal": "200809",
+  "road": "FRENCH ROAD"
+ },
+ "GAA02B": {
+  "postal": "160568",
+  "road": "GANGES AVENUE"
+ },
+ "GAN01N": {
+  "postal": "670148",
+  "road": "GANGSA ROAD"
+ },
+ "GEA00Y": {
+  "postal": "380131",
+  "road": "GEYLANG EAST AVENUE 1"
+ },
+ "GEA01R": {
+  "postal": "380129",
+  "road": "GEYLANG EAST AVENUE 2"
+ },
+ "GEB00B": {
+  "postal": "333059",
+  "road": "GEYLANG BAHRU"
+ },
+ "GEC01Q": {
+  "postal": "380120",
+  "road": "GEYLANG EAST CENTRAL"
+ },
+ "GES01G": {
+  "postal": "403002",
+  "road": "GEYLANG SERAI"
+ },
+ "GEY28W": {
+  "postal": "381111",
+  "road": "LORONG 3 GEYLANG"
+ },
+ "GHL00P": {
+  "postal": "270029",
+  "road": "GHIM MOH LINK"
+ },
+ "GHM00D": {
+  "postal": "270006",
+  "road": "GHIM MOH ROAD"
+ },
+ "GLO00W": {
+  "postal": "210010",
+  "road": "GLOUCESTER ROAD"
+ },
+ "GUS00Y": {
+  "postal": "160076",
+  "road": "GUAN CHUAN STREET"
+ },
+ "HAI00U": {
+  "postal": "430022",
+  "road": "HAIG ROAD"
+ },
+ "HAV00N": {
+  "postal": "160022",
+  "road": "HAVELOCK ROAD"
+ },
+ "HEC00Q": {
+  "postal": "151106",
+  "road": "HENDERSON CRESCENT"
+ },
+ "HEN00D": {
+  "postal": "152095",
+  "road": "HENDERSON ROAD"
+ },
+ "HOA00Q": {
+  "postal": "271010",
+  "road": "HOLLAND AVENUE"
+ },
+ "HOA03T": {
+  "postal": "531172",
+  "road": "HOUGANG AVENUE 1"
+ },
+ "HOA04L": {
+  "postal": "530415",
+  "road": "HOUGANG AVENUE 10"
+ },
+ "HOA05Y": {
+  "postal": "530711",
+  "road": "HOUGANG AVENUE 2"
+ },
+ "HOA06N": {
+  "postal": "530021",
+  "road": "HOUGANG AVENUE 3"
+ },
+ "HOA07L": {
+  "postal": "531576",
+  "road": "HOUGANG AVENUE 4"
+ },
+ "HOA08B": {
+  "postal": "530333",
+  "road": "HOUGANG AVENUE 5"
+ },
+ "HOA09N": {
+  "postal": "530429",
+  "road": "HOUGANG AVENUE 6"
+ },
+ "HOA10D": {
+  "postal": "530340",
+  "road": "HOUGANG AVENUE 7"
+ },
+ "HOA11S": {
+  "postal": "530610",
+  "road": "HOUGANG AVENUE 8"
+ },
+ "HOA14W": {
+  "postal": "530968",
+  "road": "HOUGANG AVENUE 9"
+ },
+ "HOC00D": {
+  "postal": "610111",
+  "road": "HO CHING ROAD"
+ },
+ "HOC04B": {
+  "postal": "271006",
+  "road": "HOLLAND CLOSE"
+ },
+ "HOC07N": {
+  "postal": "530853",
+  "road": "HOUGANG CENTRAL"
+ },
+ "HOD00F": {
+  "postal": "270041",
+  "road": "HOLLAND DRIVE"
+ },
+ "HOF00Q": {
+  "postal": "150050",
+  "road": "HOY FATT ROAD"
+ },
+ "HOS06B": {
+  "postal": "530158",
+  "road": "HOUGANG STREET 11"
+ },
+ "HOS07G": {
+  "postal": "530237",
+  "road": "HOUGANG STREET 21"
+ },
+ "HOS08G": {
+  "postal": "530243",
+  "road": "HOUGANG STREET 22"
+ },
+ "HOS09R": {
+  "postal": "530698",
+  "road": "HOUGANG STREET 61"
+ },
+ "HOS12Q": {
+  "postal": "530565",
+  "road": "HOUGANG STREET 51"
+ },
+ "HOS13L": {
+  "postal": "530534",
+  "road": "HOUGANG STREET 52"
+ },
+ "HOS14W": {
+  "postal": "530930",
+  "road": "HOUGANG STREET 91"
+ },
+ "HOS15X": {
+  "postal": "530945",
+  "road": "HOUGANG STREET 92"
+ },
+ "HOS18W": {
+  "postal": "530375",
+  "road": "HOUGANG STREET 31"
+ },
+ "HOS20S": {
+  "postal": "530376",
+  "road": "HOUGANG STREET 32"
+ },
+ "HOS21Q": {
+  "postal": "530178",
+  "road": "HOUGANG STREET 12"
+ },
+ "HOS22Q": {
+  "postal": "530181",
+  "road": "HOUGANG STREET 13"
+ },
+ "IND01D": {
+  "postal": "160077",
+  "road": "INDUS ROAD"
+ },
+ "JEL03J": {
+  "postal": "670509",
+  "road": "JELAPANG ROAD"
+ },
+ "JEL04R": {
+  "postal": "200814",
+  "road": "JELLICOE ROAD"
+ },
+ "JEL08J": {
+  "postal": "671183",
+  "road": "JELEBU ROAD"
+ },
+ "JOC03T": {
+  "postal": "420004",
+  "road": "JOO CHIAT ROAD"
+ },
+ "JOS01G": {
+  "postal": "360013",
+  "road": "JOO SENG ROAD"
+ },
+ "JUA00N": {
+  "postal": "602318",
+  "road": "JURONG EAST AVENUE 1"
+ },
+ "JUA01Q": {
+  "postal": "640424",
+  "road": "JURONG WEST AVENUE 1"
+ },
+ "JUA02D": {
+  "postal": "640719",
+  "road": "JURONG WEST AVENUE 5"
+ },
+ "JUA04Q": {
+  "postal": "641273",
+  "road": "JURONG WEST AVENUE 3"
+ },
+ "JUC06T": {
+  "postal": "640695",
+  "road": "JURONG WEST CENTRAL 1"
+ },
+ "JUC08W": {
+  "postal": "642698",
+  "road": "JURONG WEST CENTRAL 3"
+ },
+ "JUG00K": {
+  "postal": "600133",
+  "road": "JURONG GATEWAY ROAD"
+ },
+ "JUS03N": {
+  "postal": "600104",
+  "road": "JURONG EAST STREET 13"
+ },
+ "JUS04Q": {
+  "postal": "600218",
+  "road": "JURONG EAST STREET 21"
+ },
+ "JUS05Q": {
+  "postal": "600257",
+  "road": "JURONG EAST STREET 24"
+ },
+ "JUS06Q": {
+  "postal": "600317",
+  "road": "JURONG EAST STREET 31"
+ },
+ "JUS07F": {
+  "postal": "600314",
+  "road": "JURONG EAST STREET 32"
+ },
+ "JUS09H": {
+  "postal": "640464",
+  "road": "JURONG WEST STREET 41"
+ },
+ "JUS10Y": {
+  "postal": "640415",
+  "road": "JURONG WEST STREET 42"
+ },
+ "JUS11E": {
+  "postal": "640504",
+  "road": "JURONG WEST STREET 51"
+ },
+ "JUS12Y": {
+  "postal": "640531",
+  "road": "JURONG WEST STREET 52"
+ },
+ "JUS13F": {
+  "postal": "640952",
+  "road": "JURONG WEST STREET 91"
+ },
+ "JUS14M": {
+  "postal": "640931",
+  "road": "JURONG WEST STREET 92"
+ },
+ "JUS15T": {
+  "postal": "641990",
+  "road": "JURONG WEST STREET 93"
+ },
+ "JUS16M": {
+  "postal": "640826",
+  "road": "JURONG WEST STREET 81"
+ },
+ "JUS17T": {
+  "postal": "640739",
+  "road": "JURONG WEST STREET 73"
+ },
+ "JUS18J": {
+  "postal": "640701",
+  "road": "JURONG WEST STREET 71"
+ },
+ "JUS19B": {
+  "postal": "640731",
+  "road": "JURONG WEST STREET 72"
+ },
+ "JUS22J": {
+  "postal": "642648",
+  "road": "JURONG WEST STREET 61"
+ },
+ "JUS23Y": {
+  "postal": "640605",
+  "road": "JURONG WEST STREET 62"
+ },
+ "JUS25R": {
+  "postal": "640685",
+  "road": "JURONG WEST STREET 64"
+ },
+ "JUS26E": {
+  "postal": "640759",
+  "road": "JURONG WEST STREET 74"
+ },
+ "JUS27Q": {
+  "postal": "640738",
+  "road": "JURONG WEST STREET 75"
+ },
+ "JUS29A": {
+  "postal": "640610",
+  "road": "JURONG WEST STREET 65"
+ },
+ "JUS33Q": {
+  "postal": "642272",
+  "road": "JURONG WEST STREET 24"
+ },
+ "JUS34C": {
+  "postal": "643274",
+  "road": "JURONG WEST STREET 25"
+ },
+ "KAB03N": {
+  "postal": "330063",
+  "road": "KALLANG BAHRU"
+ },
+ "KAC06N": {
+  "postal": "610339",
+  "road": "KANG CHING ROAD"
+ },
+ "KAY00H": {
+  "postal": "791447",
+  "road": "JALAN KAYU"
+ },
+ "KAY01G": {
+  "postal": "431001",
+  "road": "KAMPONG KAYU ROAD"
+ },
+ "KEC11X": {
+  "postal": "682805",
+  "road": "KEAT HONG CLOSE"
+ },
+ "KEL11L": {
+  "postal": "200031",
+  "road": "KELANTAN LANE"
+ },
+ "KEL12T": {
+  "postal": "201028",
+  "road": "KELANTAN ROAD"
+ },
+ "KEL20Q": {
+  "postal": "682817",
+  "road": "KEAT HONG LINK"
+ },
+ "KEM08W": {
+  "postal": "332002",
+  "road": "KEMPAS ROAD"
+ },
+ "KEN03T": {
+  "postal": "210053",
+  "road": "KENT ROAD"
+ },
+ "KIA02A": {
+  "postal": "310253",
+  "road": "KIM KEAT AVENUE"
+ },
+ "KIA03N": {
+  "postal": "200803",
+  "road": "KING GEORGE'S AVENUE"
+ },
+ "KIL05U": {
+  "postal": "310244",
+  "road": "KIM KEAT LINK"
+ },
+ "KIP00G": {
+  "postal": "160049",
+  "road": "KIM PONG ROAD"
+ },
+ "KIP01M": {
+  "postal": "160124",
+  "road": "KIM TIAN PLACE"
+ },
+ "KIS00G": {
+  "postal": "161034",
+  "road": "KIM CHENG STREET"
+ },
+ "KIT04C": {
+  "postal": "161131",
+  "road": "KIM TIAN ROAD"
+ },
+ "KIT07C": {
+  "postal": "200002",
+  "road": "KITCHENER ROAD"
+ },
+ "KLI00W": {
+  "postal": "160020",
+  "road": "JALAN KLINIK"
+ },
+ "KLL00G": {
+  "postal": "211672",
+  "road": "KLANG LANE"
+ },
+ "KRA02N": {
+  "postal": "080333",
+  "road": "KRETA AYER ROAD"
+ },
+ "KUK00J": {
+  "postal": "167008",
+  "road": "JALAN KUKOH"
+ },
+ "LEB02Q": {
+  "postal": "150054",
+  "road": "LENGKOK BAHRU"
+ },
+ "LEL03J": {
+  "postal": "531003",
+  "road": "LORONG LEW LIAN"
+ },
+ "LET03Z": {
+  "postal": "410112",
+  "road": "LENGKONG TIGA"
+ },
+ "LIM05E": {
+  "postal": "320076",
+  "road": "LORONG LIMAU"
+ },
+ "LIS02X": {
+  "postal": "161021",
+  "road": "LIM LIAK STREET"
+ },
+ "LOD02F": {
+  "postal": "160048",
+  "road": "LOWER DELTA ROAD"
+ },
+ "LOM01S": {
+  "postal": "670177",
+  "road": "LOMPANG ROAD"
+ },
+ "MAC11X": {
+  "postal": "440046",
+  "road": "MARINE CRESCENT"
+ },
+ "MAC12L": {
+  "postal": "440086",
+  "road": "MARINE PARADE CENTRAL"
+ },
+ "MAC13T": {
+  "postal": "730213",
+  "road": "MARSILING CRESCENT"
+ },
+ "MAD03B": {
+  "postal": "143035",
+  "road": "MARGARET DRIVE"
+ },
+ "MAD06N": {
+  "postal": "440077",
+  "road": "MARINE DRIVE"
+ },
+ "MAD07G": {
+  "postal": "730007",
+  "road": "MARSILING DRIVE"
+ },
+ "MAL03N": {
+  "postal": "361082",
+  "road": "MACPHERSON LANE"
+ },
+ "MAL10K": {
+  "postal": "733012",
+  "road": "MARSILING LANE"
+ },
+ "MAM00B": {
+  "postal": "320057",
+  "road": "JALAN MA'MOR"
+ },
+ "MAR19A": {
+  "postal": "730125",
+  "road": "MARSILING RISE"
+ },
+ "MAR20D": {
+  "postal": "730140",
+  "road": "MARSILING ROAD"
+ },
+ "MAT14R": {
+  "postal": "441017",
+  "road": "MARINE TERRACE"
+ },
+ "MAU02U": {
+  "postal": "200001",
+  "road": "MAUDE ROAD"
+ },
+ "MCN00F": {
+  "postal": "321141",
+  "road": "MCNAIR ROAD"
+ },
+ "MEC00Y": {
+  "postal": "140150",
+  "road": "MEI CHIN ROAD"
+ },
+ "MEM00D": {
+  "postal": "160025",
+  "road": "JALAN MEMBINA"
+ },
+ "MES04U": {
+  "postal": "140156",
+  "road": "MEI LING STREET"
+ },
+ "MIN01G": {
+  "postal": "162006",
+  "road": "JALAN MINYAK"
+ },
+ "MOD04F": {
+  "postal": "752589",
+  "road": "MONTREAL DRIVE"
+ },
+ "MOL06T": {
+  "postal": "750593",
+  "road": "MONTREAL LINK"
+ },
+ "MOT00M": {
+  "postal": "161048",
+  "road": "MOH GUAN TERRACE"
+ },
+ "MOU00L": {
+  "postal": "300069",
+  "road": "MOULMEIN ROAD"
+ },
+ "MOV02Q": {
+  "postal": "361224",
+  "road": "MOUNT VERNON ROAD"
+ },
+ "NEC03R": {
+  "postal": "461030",
+  "road": "NEW UPPER CHANGI ROAD"
+ },
+ "NEM00F": {
+  "postal": "050032",
+  "road": "NEW MARKET ROAD"
+ },
+ "NEP02B": {
+  "postal": "820441",
+  "road": "NEW PUNGGOL ROAD"
+ },
+ "NOB02Q": {
+  "postal": "190468",
+  "road": "NORTH BRIDGE ROAD"
+ },
+ "NOC02F": {
+  "postal": "823423",
+  "road": "NORTHSHORE CRESCENT"
+ },
+ "NOD04D": {
+  "postal": "768020",
+  "road": "NORTHPOINT DRIVE"
+ },
+ "NOD05F": {
+  "postal": "823438",
+  "road": "NORTHSHORE DRIVE"
+ },
+ "NOL03E": {
+  "postal": "822407",
+  "road": "NORTHSHORE LINK"
+ },
+ "NOW00N": {
+  "postal": "730909",
+  "road": "NORTH WOODLANDS WAY"
+ },
+ "NOW02S": {
+  "postal": "821407",
+  "road": "NORTHSHORE WALK"
+ },
+ "OLA00B": {
+  "postal": "390095",
+  "road": "OLD AIRPORT ROAD"
+ },
+ "OWE00X": {
+  "postal": "210047",
+  "road": "OWEN ROAD"
+ },
+ "PAA07B": {
+  "postal": "519725",
+  "road": "PASIR RIS AVENUE"
+ },
+ "PAC04H": {
+  "postal": "050033",
+  "road": "PARK CRESCENT"
+ },
+ "PAC12L": {
+  "postal": "519613",
+  "road": "PASIR RIS CENTRAL"
+ },
+ "PAD05N": {
+  "postal": "510483",
+  "road": "PASIR RIS DRIVE 4"
+ },
+ "PAD06N": {
+  "postal": "510419",
+  "road": "PASIR RIS DRIVE 6"
+ },
+ "PAD07X": {
+  "postal": "511636",
+  "road": "PASIR RIS DRIVE 1"
+ },
+ "PAD08R": {
+  "postal": "510629",
+  "road": "PASIR RIS DRIVE 3"
+ },
+ "PAD11B": {
+  "postal": "510651",
+  "road": "PASIR RIS DRIVE 10"
+ },
+ "PAG01X": {
+  "postal": "600403",
+  "road": "PANDAN GARDENS"
+ },
+ "PAH04B": {
+  "postal": "519247",
+  "road": "PASIR RIS HEIGHTS"
+ },
+ "PAR09C": {
+  "postal": "519115",
+  "road": "PASIR RIS ROAD"
+ },
+ "PAS18R": {
+  "postal": "510142",
+  "road": "PASIR RIS STREET 11"
+ },
+ "PAS19M": {
+  "postal": "510197",
+  "road": "PASIR RIS STREET 12"
+ },
+ "PAS20G": {
+  "postal": "510273",
+  "road": "PASIR RIS STREET 21"
+ },
+ "PAS21K": {
+  "postal": "510465",
+  "road": "PASIR RIS STREET 41"
+ },
+ "PAS22U": {
+  "postal": "510558",
+  "road": "PASIR RIS STREET 51"
+ },
+ "PAS23E": {
+  "postal": "510773",
+  "road": "PASIR RIS STREET 71"
+ },
+ "PAS24W": {
+  "postal": "510710",
+  "road": "PASIR RIS STREET 72"
+ },
+ "PAS25J": {
+  "postal": "510509",
+  "road": "PASIR RIS STREET 52"
+ },
+ "PAS26M": {
+  "postal": "510575",
+  "road": "PASIR RIS STREET 53"
+ },
+ "PAS27Z": {
+  "postal": "511149",
+  "road": "PASIR RIS STREET 13"
+ },
+ "PAT06T": {
+  "postal": "518717",
+  "road": "PASIR RIS TERRACE"
+ },
+ "PAW02M": {
+  "postal": "381123",
+  "road": "PAYA LEBAR WAY"
+ },
+ "PEN07R": {
+  "postal": "670114",
+  "road": "PENDING ROAD"
+ },
+ "PER17S": {
+  "postal": "210678",
+  "road": "PERUMAL ROAD"
+ },
+ "PET10G": {
+  "postal": "670145",
+  "road": "PETIR ROAD"
+ },
+ "PIC02A": {
+  "postal": "390009",
+  "road": "PINE CLOSE"
+ },
+ "PIL01R": {
+  "postal": "390037",
+  "road": "PINE LANE"
+ },
+ "PIP00P": {
+  "postal": "372052",
+  "road": "PIPIT ROAD"
+ },
+ "PLC00Q": {
+  "postal": "691113",
+  "road": "PLANTATION CRESCENT"
+ },
+ "POA04Y": {
+  "postal": "350133",
+  "road": "POTONG PASIR AVENUE 1"
+ },
+ "POA05N": {
+  "postal": "350144",
+  "road": "POTONG PASIR AVENUE 2"
+ },
+ "POA06N": {
+  "postal": "350140",
+  "road": "POTONG PASIR AVENUE 3"
+ },
+ "PUC09U": {
+  "postal": "820646",
+  "road": "PUNGGOL CENTRAL"
+ },
+ "PUD06M": {
+  "postal": "822642",
+  "road": "PUNGGOL DRIVE"
+ },
+ "PUE01K": {
+  "postal": "820658",
+  "road": "PUNGGOL EAST"
+ },
+ "PUF02Z": {
+  "postal": "821228",
+  "road": "PUNGGOL FIELD"
+ },
+ "PUN03D": {
+  "postal": "824195",
+  "road": "PUNGGOL ROAD"
+ },
+ "PUP08R": {
+  "postal": "820209",
+  "road": "PUNGGOL PLACE"
+ },
+ "PUW00T": {
+  "postal": "820266",
+  "road": "PUNGGOL WAY"
+ },
+ "PUW01Q": {
+  "postal": "820127",
+  "road": "PUNGGOL FIELD WALK"
+ },
+ "PUW02H": {
+  "postal": "820213",
+  "road": "PUNGGOL WALK"
+ },
+ "QUC01C": {
+  "postal": "140019",
+  "road": "QUEEN'S CLOSE"
+ },
+ "QUE01M": {
+  "postal": "260001",
+  "road": "QUEEN'S ROAD"
+ },
+ "QUE02Z": {
+  "postal": "140168",
+  "road": "QUEENSWAY"
+ },
+ "QUS00Z": {
+  "postal": "182269",
+  "road": "QUEEN STREET"
+ },
+ "RAC01Y": {
+  "postal": "210684",
+  "road": "RACE COURSE ROAD"
+ },
+ "RAJ00B": {
+  "postal": "321106",
+  "road": "JALAN RAJAH"
+ },
+ "RAN02Q": {
+  "postal": "210677",
+  "road": "RANGOON ROAD"
+ },
+ "REC01B": {
+  "postal": "150068",
+  "road": "REDHILL CLOSE"
+ },
+ "RED01D": {
+  "postal": "153075",
+  "road": "REDHILL ROAD"
+ },
+ "REL01F": {
+  "postal": "150081",
+  "road": "REDHILL LANE"
+ },
+ "RIC03F": {
+  "postal": "541178",
+  "road": "RIVERVALE CRESCENT"
+ },
+ "RID02A": {
+  "postal": "545122",
+  "road": "RIVERVALE DRIVE"
+ },
+ "RIS01A": {
+  "postal": "540138",
+  "road": "RIVERVALE STREET"
+ },
+ "RIW00T": {
+  "postal": "541107",
+  "road": "RIVERVALE WALK"
+ },
+ "ROW01P": {
+  "postal": "200641",
+  "road": "ROWELL ROAD"
+ },
+ "RUT00R": {
+  "postal": "150035",
+  "road": "JALAN RUMAH TINGGI"
+ },
+ "SAL07N": {
+  "postal": "050004",
+  "road": "SAGO LANE"
+ },
+ "SAT00T": {
+  "postal": "391090",
+  "road": "JALAN SATU"
+ },
+ "SAU00Q": {
+  "postal": "670413",
+  "road": "SAUJANA ROAD"
+ },
+ "SEA11N": {
+  "postal": "550316",
+  "road": "SERANGOON AVENUE 2"
+ },
+ "SEA12Y": {
+  "postal": "550327",
+  "road": "SERANGOON AVENUE 3"
+ },
+ "SEA13U": {
+  "postal": "550212",
+  "road": "SERANGOON AVENUE 4"
+ },
+ "SEA14Z": {
+  "postal": "550105",
+  "road": "SERANGOON NORTH AVENUE 1"
+ },
+ "SEA15J": {
+  "postal": "550141",
+  "road": "SERANGOON NORTH AVENUE 2"
+ },
+ "SEA17K": {
+  "postal": "550401",
+  "road": "SERANGOON AVENUE 1"
+ },
+ "SEA18U": {
+  "postal": "550543",
+  "road": "SERANGOON NORTH AVENUE 3"
+ },
+ "SEA19N": {
+  "postal": "550529",
+  "road": "SERANGOON NORTH AVENUE 4"
+ },
+ "SEA22E": {
+  "postal": "541281",
+  "road": "SENGKANG EAST AVENUE"
+ },
+ "SEA23T": {
+  "postal": "790438",
+  "road": "SENGKANG WEST AVENUE"
+ },
+ "SEA25E": {
+  "postal": "750370",
+  "road": "SEMBAWANG AVENUE"
+ },
+ "SEC07D": {
+  "postal": "550413",
+  "road": "SERANGOON CENTRAL"
+ },
+ "SEC13Y": {
+  "postal": "540270",
+  "road": "SENGKANG CENTRAL"
+ },
+ "SEC14F": {
+  "postal": "750327",
+  "road": "SEMBAWANG CRESCENT"
+ },
+ "SEC15R": {
+  "postal": "751322",
+  "road": "SEMBAWANG CLOSE"
+ },
+ "SEC21K": {
+  "postal": "670646",
+  "road": "SENJA CLOSE"
+ },
+ "SED06Q": {
+  "postal": "550263",
+  "road": "SERANGOON CENTRAL DRIVE"
+ },
+ "SED07J": {
+  "postal": "542173",
+  "road": "SENGKANG EAST DRIVE"
+ },
+ "SED08Q": {
+  "postal": "750412",
+  "road": "SEMBAWANG DRIVE"
+ },
+ "SEE05U": {
+  "postal": "541200",
+  "road": "SENGKANG EAST ROAD"
+ },
+ "SEG05C": {
+  "postal": "670548",
+  "road": "SEGAR ROAD"
+ },
+ "SEL11N": {
+  "postal": "181009",
+  "road": "SELEGIE ROAD"
+ },
+ "SEL14B": {
+  "postal": "160062",
+  "road": "SENG POH LANE"
+ },
+ "SEL29G": {
+  "postal": "670651",
+  "road": "SENJA LINK"
+ },
+ "SEN12T": {
+  "postal": "670625",
+  "road": "SENJA ROAD"
+ },
+ "SEP03Y": {
+  "postal": "160072",
+  "road": "SENG POH ROAD"
+ },
+ "SEV02J": {
+  "postal": "750315",
+  "road": "SEMBAWANG VISTA"
+ },
+ "SEW07Y": {
+  "postal": "546121",
+  "road": "SENGKANG EAST WAY"
+ },
+ "SEW08G": {
+  "postal": "790462",
+  "road": "SENGKANG WEST WAY"
+ },
+ "SEW10J": {
+  "postal": "750355",
+  "road": "SEMBAWANG WAY"
+ },
+ "SEW14X": {
+  "postal": "791458",
+  "road": "SENGKANG WEST ROAD"
+ },
+ "SHU01R": {
+  "postal": "570312",
+  "road": "SHUNFU ROAD"
+ },
+ "SIA07X": {
+  "postal": "160149",
+  "road": "SILAT AVENUE"
+ },
+ "SIA10K": {
+  "postal": "400848",
+  "road": "SIMS AVENUE"
+ },
+ "SIA16G": {
+  "postal": "570405",
+  "road": "SIN MING AVENUE"
+ },
+ "SID03T": {
+  "postal": "380050",
+  "road": "SIMS DRIVE"
+ },
+ "SID04Q": {
+  "postal": "575712",
+  "road": "SIN MING DRIVE"
+ },
+ "SIL10A": {
+  "postal": "522168",
+  "road": "SIMEI LANE"
+ },
+ "SIM02X": {
+  "postal": "520162",
+  "road": "SIMEI ROAD"
+ },
+ "SIM04C": {
+  "postal": "571022",
+  "road": "SIN MING ROAD"
+ },
+ "SIP07N": {
+  "postal": "380047",
+  "road": "SIMS PLACE"
+ },
+ "SIS04J": {
+  "postal": "520153",
+  "road": "SIMEI STREET 1"
+ },
+ "SIS05T": {
+  "postal": "520142",
+  "road": "SIMEI STREET 2"
+ },
+ "SIS06H": {
+  "postal": "520248",
+  "road": "SIMEI STREET 3"
+ },
+ "SIS07L": {
+  "postal": "520222",
+  "road": "SIMEI STREET 4"
+ },
+ "SIS12N": {
+  "postal": "520242",
+  "road": "SIMEI STREET 5"
+ },
+ "SMS00U": {
+  "postal": "051335",
+  "road": "SMITH STREET"
+ },
+ "SOD01W": {
+  "postal": "730900",
+  "road": "SOUTH WOODLANDS DRIVE"
+ },
+ "SPP00M": {
+  "postal": "080105",
+  "road": "SPOTTISWOODE PARK ROAD"
+ },
+ "STA11R": {
+  "postal": "143053",
+  "road": "STRATHMORE AVENUE"
+ },
+ "STG00S": {
+  "postal": "320023",
+  "road": "SAINT GEORGE'S ROAD"
+ },
+ "STI02L": {
+  "postal": "141182",
+  "road": "STIRLING ROAD"
+ },
+ "STL00N": {
+  "postal": "320026",
+  "road": "SAINT GEORGE'S LANE"
+ },
+ "SUL01M": {
+  "postal": "190019",
+  "road": "JALAN SULTAN"
+ },
+ "SUL10M": {
+  "postal": "822312",
+  "road": "SUMANG LINK"
+ },
+ "SUL11B": {
+  "postal": "820232",
+  "road": "SUMANG LANE"
+ },
+ "SUW06A": {
+  "postal": "820327",
+  "road": "SUMANG WALK"
+ },
+ "TAA06N": {
+  "postal": "524890",
+  "road": "TAMPINES AVENUE 1"
+ },
+ "TAA07R": {
+  "postal": "521208",
+  "road": "TAMPINES AVENUE 2"
+ },
+ "TAA09N": {
+  "postal": "520816",
+  "road": "TAMPINES AVENUE 4"
+ },
+ "TAA10E": {
+  "postal": "521858",
+  "road": "TAMPINES AVENUE 5"
+ },
+ "TAA11N": {
+  "postal": "521390",
+  "road": "TAMPINES AVENUE 7"
+ },
+ "TAA12N": {
+  "postal": "521893",
+  "road": "TAMPINES AVENUE 8"
+ },
+ "TAA13A": {
+  "postal": "520494",
+  "road": "TAMPINES AVENUE 9"
+ },
+ "TAA29A": {
+  "postal": "522623",
+  "road": "TAMPINES AVENUE 12"
+ },
+ "TAC00N": {
+  "postal": "613337",
+  "road": "TAH CHING ROAD"
+ },
+ "TAC08D": {
+  "postal": "610113",
+  "road": "TAO CHING ROAD"
+ },
+ "TAC10N": {
+  "postal": "520504",
+  "road": "TAMPINES CENTRAL 1"
+ },
+ "TAC19R": {
+  "postal": "522524",
+  "road": "TAMPINES CENTRAL 7"
+ },
+ "TAC20A": {
+  "postal": "524519",
+  "road": "TAMPINES CENTRAL 8"
+ },
+ "TAD07G": {
+  "postal": "521634",
+  "road": "TAMPINES NORTH DRIVE 2"
+ },
+ "TAD08A": {
+  "postal": "523610",
+  "road": "TAMPINES NORTH DRIVE 1"
+ },
+ "TAH03D": {
+  "postal": "142034",
+  "road": "TANGLIN HALT ROAD"
+ },
+ "TAP10G": {
+  "postal": "081005",
+  "road": "TANJONG PAGAR PLAZA"
+ },
+ "TAS03D": {
+  "postal": "162012",
+  "road": "TAMAN HO SWEE"
+ },
+ "TAS12R": {
+  "postal": "521108",
+  "road": "TAMPINES STREET 11"
+ },
+ "TAS13M": {
+  "postal": "521145",
+  "road": "TAMPINES STREET 12"
+ },
+ "TAS14R": {
+  "postal": "520206",
+  "road": "TAMPINES STREET 21"
+ },
+ "TAS15G": {
+  "postal": "520297",
+  "road": "TAMPINES STREET 22"
+ },
+ "TAS16C": {
+  "postal": "521226",
+  "road": "TAMPINES STREET 23"
+ },
+ "TAS17G": {
+  "postal": "521223",
+  "road": "TAMPINES STREET 24"
+ },
+ "TAS19U": {
+  "postal": "520422",
+  "road": "TAMPINES STREET 41"
+ },
+ "TAS20C": {
+  "postal": "523450",
+  "road": "TAMPINES STREET 42"
+ },
+ "TAS21R": {
+  "postal": "520495",
+  "road": "TAMPINES STREET 43"
+ },
+ "TAS22Y": {
+  "postal": "520465",
+  "road": "TAMPINES STREET 44"
+ },
+ "TAS23F": {
+  "postal": "525492",
+  "road": "TAMPINES STREET 45"
+ },
+ "TAS24M": {
+  "postal": "520627",
+  "road": "TAMPINES STREET 61"
+ },
+ "TAS25T": {
+  "postal": "520638",
+  "road": "TAMPINES STREET 62"
+ },
+ "TAS26A": {
+  "postal": "520888",
+  "road": "TAMPINES STREET 81"
+ },
+ "TAS27G": {
+  "postal": "520848",
+  "road": "TAMPINES STREET 82"
+ },
+ "TAS28R": {
+  "postal": "521885",
+  "road": "TAMPINES STREET 83"
+ },
+ "TAS29Y": {
+  "postal": "520871",
+  "road": "TAMPINES STREET 84"
+ },
+ "TAS30D": {
+  "postal": "520915",
+  "road": "TAMPINES STREET 91"
+ },
+ "TAS39U": {
+  "postal": "520331",
+  "road": "TAMPINES STREET 32"
+ },
+ "TAS40G": {
+  "postal": "520311",
+  "road": "TAMPINES STREET 33"
+ },
+ "TAS43K": {
+  "postal": "520362",
+  "road": "TAMPINES STREET 34"
+ },
+ "TAS45P": {
+  "postal": "520707",
+  "road": "TAMPINES STREET 71"
+ },
+ "TAS46M": {
+  "postal": "520739",
+  "road": "TAMPINES STREET 72"
+ },
+ "TAS48N": {
+  "postal": "524874",
+  "road": "TAMPINES STREET 85"
+ },
+ "TAS49H": {
+  "postal": "523870",
+  "road": "TAMPINES STREET 86"
+ },
+ "TAS55P": {
+  "postal": "522665",
+  "road": "TAMPINES STREET 64"
+ },
+ "TAS57Q": {
+  "postal": "521963",
+  "road": "TAMPINES STREET 96"
+ },
+ "TAW07K": {
+  "postal": "523858",
+  "road": "TAMPINES WALK"
+ },
+ "TEA02X": {
+  "postal": "680004",
+  "road": "TECK WHYE AVENUE"
+ },
+ "TEA08X": {
+  "postal": "690319",
+  "road": "TENGAH PARK AVENUE"
+ },
+ "TEA09T": {
+  "postal": "692133",
+  "road": "TENGAH GARDEN AVENUE"
+ },
+ "TEC01D": {
+  "postal": "090021",
+  "road": "TELOK BLANGAH CRESCENT"
+ },
+ "TEC02D": {
+  "postal": "680165",
+  "road": "TECK WHYE CRESCENT"
+ },
+ "TEC06T": {
+  "postal": "690241",
+  "road": "TENGAH CENTRAL"
+ },
+ "TED00T": {
+  "postal": "100046",
+  "road": "TELOK BLANGAH DRIVE"
+ },
+ "TED03R": {
+  "postal": "690301",
+  "road": "TENGAH DRIVE"
+ },
+ "TEG02M": {
+  "postal": "600052",
+  "road": "TEBAN GARDENS ROAD"
+ },
+ "TEH01X": {
+  "postal": "100073",
+  "road": "TELOK BLANGAH HEIGHTS"
+ },
+ "TEL13D": {
+  "postal": "680019",
+  "road": "TECK WHYE LANE"
+ },
+ "TEN00H": {
+  "postal": "411649",
+  "road": "JALAN TENAGA"
+ },
+ "TEN05G": {
+  "postal": "322117",
+  "road": "JALAN TENTERAM"
+ },
+ "TEN06A": {
+  "postal": "690316",
+  "road": "TENGAH ROAD"
+ },
+ "TEP06A": {
+  "postal": "498730",
+  "road": "TELOK PAKU ROAD"
+ },
+ "TER09S": {
+  "postal": "090043",
+  "road": "TELOK BLANGAH RISE"
+ },
+ "TES08L": {
+  "postal": "102090",
+  "road": "TELOK BLANGAH STREET 31"
+ },
+ "TES09S": {
+  "postal": "101078",
+  "road": "TELOK BLANGAH STREET 32"
+ },
+ "TES13S": {
+  "postal": "210683",
+  "road": "TESSENSOHN ROAD"
+ },
+ "TEW00S": {
+  "postal": "680161",
+  "road": "JALAN TECK WHYE"
+ },
+ "TEW01W": {
+  "postal": "090027",
+  "road": "TELOK BLANGAH WAY"
+ },
+ "TEW06G": {
+  "postal": "692235",
+  "road": "TENGAH GARDEN WALK"
+ },
+ "THO00S": {
+  "postal": "300001",
+  "road": "THOMSON ROAD"
+ },
+ "TIB01D": {
+  "postal": "163028",
+  "road": "TIONG BAHRU ROAD"
+ },
+ "TIG00W": {
+  "postal": "390049",
+  "road": "JALAN TIGA"
+ },
+ "TIP01T": {
+  "postal": "160074",
+  "road": "TIONG POH ROAD"
+ },
+ "TOC00J": {
+  "postal": "313079",
+  "road": "TOA PAYOH CENTRAL"
+ },
+ "TOD03Z": {
+  "postal": "590017",
+  "road": "TOH YI DRIVE"
+ },
+ "TOE00A": {
+  "postal": "310023",
+  "road": "TOA PAYOH EAST"
+ },
+ "TOG02Q": {
+  "postal": "600277",
+  "road": "TOH GUAN ROAD"
+ },
+ "TON01D": {
+  "postal": "310200",
+  "road": "TOA PAYOH NORTH"
+ },
+ "TOP02W": {
+  "postal": "310127",
+  "road": "LORONG 1 TOA PAYOH"
+ },
+ "TOP03L": {
+  "postal": "312139",
+  "road": "LORONG 1A TOA PAYOH"
+ },
+ "TOP04U": {
+  "postal": "310147",
+  "road": "LORONG 2 TOA PAYOH"
+ },
+ "TOP05K": {
+  "postal": "310096",
+  "road": "LORONG 3 TOA PAYOH"
+ },
+ "TOP06M": {
+  "postal": "311080",
+  "road": "LORONG 4 TOA PAYOH"
+ },
+ "TOP07K": {
+  "postal": "310061",
+  "road": "LORONG 5 TOA PAYOH"
+ },
+ "TOP08A": {
+  "postal": "310490",
+  "road": "LORONG 6 TOA PAYOH"
+ },
+ "TOP09C": {
+  "postal": "311019",
+  "road": "LORONG 7 TOA PAYOH"
+ },
+ "TOP10F": {
+  "postal": "310216",
+  "road": "LORONG 8 TOA PAYOH"
+ },
+ "TOW03Z": {
+  "postal": "321107",
+  "road": "TOWNER ROAD"
+ },
+ "UBA00H": {
+  "postal": "400349",
+  "road": "UBI AVENUE 1"
+ },
+ "UBR03D": {
+  "postal": "400355",
+  "road": "UBI ROAD 3"
+ },
+ "UPA01N": {
+  "postal": "363233",
+  "road": "UPPER ALJUNIED ROAD"
+ },
+ "UPC03F": {
+  "postal": "532475",
+  "road": "UPPER SERANGOON CRESCENT"
+ },
+ "UPJ00J": {
+  "postal": "630991",
+  "road": "UPPER JURONG ROAD"
+ },
+ "UPK00W": {
+  "postal": "380019",
+  "road": "UPPER BOON KENG ROAD"
+ },
+ "UPL00W": {
+  "postal": "360003",
+  "road": "UPPER ALJUNIED LANE"
+ },
+ "UPS01M": {
+  "postal": "050536",
+  "road": "UPPER CROSS STREET"
+ },
+ "UPS06W": {
+  "postal": "530465",
+  "road": "UPPER SERANGOON ROAD"
+ },
+ "UPV01W": {
+  "postal": "530477",
+  "road": "UPPER SERANGOON VIEW"
+ },
+ "VEE00N": {
+  "postal": "200635",
+  "road": "VEERASAMY ROAD"
+ },
+ "WAS05J": {
+  "postal": "180261",
+  "road": "WATERLOO STREET"
+ },
+ "WEC01D": {
+  "postal": "120701",
+  "road": "WEST COAST ROAD"
+ },
+ "WEC03F": {
+  "postal": "121801",
+  "road": "WEST COAST CRESCENT"
+ },
+ "WEC05F": {
+  "postal": "751510",
+  "road": "WELLINGTON CIRCLE"
+ },
+ "WED00D": {
+  "postal": "120503",
+  "road": "WEST COAST DRIVE"
+ },
+ "WHA00Y": {
+  "postal": "321109",
+  "road": "WHAMPOA ROAD"
+ },
+ "WHD00Q": {
+  "postal": "320083",
+  "road": "WHAMPOA DRIVE"
+ },
+ "WHS00F": {
+  "postal": "330049",
+  "road": "WHAMPOA SOUTH"
+ },
+ "WHW00K": {
+  "postal": "330034",
+  "road": "WHAMPOA WEST"
+ },
+ "WOA00N": {
+  "postal": "730336",
+  "road": "WOODLANDS AVENUE 1"
+ },
+ "WOA01D": {
+  "postal": "730348",
+  "road": "WOODLANDS AVENUE 3"
+ },
+ "WOA02N": {
+  "postal": "730757",
+  "road": "WOODLANDS AVENUE 4"
+ },
+ "WOA03F": {
+  "postal": "730365",
+  "road": "WOODLANDS AVENUE 5"
+ },
+ "WOA05F": {
+  "postal": "731781",
+  "road": "WOODLANDS AVENUE 9"
+ },
+ "WOA09D": {
+  "postal": "738973",
+  "road": "WOODLANDS AVENUE 8"
+ },
+ "WOA12P": {
+  "postal": "730768",
+  "road": "WOODLANDS AVENUE 6"
+ },
+ "WOC05L": {
+  "postal": "733787",
+  "road": "WOODLANDS CRESCENT"
+ },
+ "WOC06Q": {
+  "postal": "730765",
+  "road": "WOODLANDS CIRCLE"
+ },
+ "WOD04K": {
+  "postal": "732896",
+  "road": "WOODLANDS DRIVE 50"
+ },
+ "WOD06X": {
+  "postal": "730516",
+  "road": "WOODLANDS DRIVE 14"
+ },
+ "WOD07M": {
+  "postal": "730589",
+  "road": "WOODLANDS DRIVE 16"
+ },
+ "WOD08Y": {
+  "postal": "730706",
+  "road": "WOODLANDS DRIVE 40"
+ },
+ "WOD09K": {
+  "postal": "730605",
+  "road": "WOODLANDS DRIVE 42"
+ },
+ "WOD11T": {
+  "postal": "730550",
+  "road": "WOODLANDS DRIVE 44"
+ },
+ "WOD12K": {
+  "postal": "730620",
+  "road": "WOODLANDS DRIVE 52"
+ },
+ "WOD13Z": {
+  "postal": "731554",
+  "road": "WOODLANDS DRIVE 53"
+ },
+ "WOD14U": {
+  "postal": "731786",
+  "road": "WOODLANDS DRIVE 60"
+ },
+ "WOD16Y": {
+  "postal": "733683",
+  "road": "WOODLANDS DRIVE 62"
+ },
+ "WOD21K": {
+  "postal": "730710",
+  "road": "WOODLANDS DRIVE 70"
+ },
+ "WOD22C": {
+  "postal": "731671",
+  "road": "WOODLANDS DRIVE 71"
+ },
+ "WOD23F": {
+  "postal": "730796",
+  "road": "WOODLANDS DRIVE 72"
+ },
+ "WOD24Y": {
+  "postal": "732686",
+  "road": "WOODLANDS DRIVE 73"
+ },
+ "WOD26Q": {
+  "postal": "736690",
+  "road": "WOODLANDS DRIVE 75"
+ },
+ "WOE03C": {
+  "postal": "757780",
+  "road": "WOODLANDS INDUSTRIAL PARK E3"
+ },
+ "WOL05S": {
+  "postal": "362206",
+  "road": "WOODLEIGH LINK"
+ },
+ "WOR03P": {
+  "postal": "732628",
+  "road": "WOODLANDS RING ROAD"
+ },
+ "WOR04F": {
+  "postal": "730783",
+  "road": "WOODLANDS RISE"
+ },
+ "WOS00L": {
+  "postal": "730171",
+  "road": "WOODLANDS STREET 11"
+ },
+ "WOS01P": {
+  "postal": "730147",
+  "road": "WOODLANDS STREET 13"
+ },
+ "WOS02Y": {
+  "postal": "730318",
+  "road": "WOODLANDS STREET 31"
+ },
+ "WOS03D": {
+  "postal": "730328",
+  "road": "WOODLANDS STREET 32"
+ },
+ "WOS04F": {
+  "postal": "730408",
+  "road": "WOODLANDS STREET 41"
+ },
+ "WOS05J": {
+  "postal": "730810",
+  "road": "WOODLANDS STREET 81"
+ },
+ "WOS06T": {
+  "postal": "730822",
+  "road": "WOODLANDS STREET 82"
+ },
+ "WOS07U": {
+  "postal": "730853",
+  "road": "WOODLANDS STREET 83"
+ },
+ "WOS10P": {
+  "postal": "738623",
+  "road": "WOODLANDS STREET 12"
+ },
+ "WOS18M": {
+  "postal": "731908",
+  "road": "WOODLANDS SQUARE"
+ },
+ "YIA00N": {
+  "postal": "763431",
+  "road": "YISHUN AVENUE 1"
+ },
+ "YIA01R": {
+  "postal": "760428",
+  "road": "YISHUN AVENUE 11"
+ },
+ "YIA02A": {
+  "postal": "760776",
+  "road": "YISHUN AVENUE 2"
+ },
+ "YIA03D": {
+  "postal": "760768",
+  "road": "YISHUN AVENUE 3"
+ },
+ "YIA04Q": {
+  "postal": "760665",
+  "road": "YISHUN AVENUE 4"
+ },
+ "YIA05T": {
+  "postal": "760711",
+  "road": "YISHUN AVENUE 5"
+ },
+ "YIA06H": {
+  "postal": "761466",
+  "road": "YISHUN AVENUE 6"
+ },
+ "YIA07N": {
+  "postal": "760175",
+  "road": "YISHUN AVENUE 7"
+ },
+ "YIA08Y": {
+  "postal": "760316",
+  "road": "YISHUN AVENUE 9"
+ },
+ "YIC01R": {
+  "postal": "760320",
+  "road": "YISHUN CENTRAL"
+ },
+ "YIC02Q": {
+  "postal": "760936",
+  "road": "YISHUN CENTRAL 1"
+ },
+ "YIR00Z": {
+  "postal": "763676",
+  "road": "YISHUN RING ROAD"
+ },
+ "YIS00U": {
+  "postal": "760154",
+  "road": "YISHUN STREET 11"
+ },
+ "YIS01N": {
+  "postal": "760214",
+  "road": "YISHUN STREET 21"
+ },
+ "YIS02A": {
+  "postal": "760264",
+  "road": "YISHUN STREET 22"
+ },
+ "YIS03Q": {
+  "postal": "760457",
+  "road": "YISHUN STREET 41"
+ },
+ "YIS04C": {
+  "postal": "760629",
+  "road": "YISHUN STREET 61"
+ },
+ "YIS05W": {
+  "postal": "760717",
+  "road": "YISHUN STREET 71"
+ },
+ "YIS06Q": {
+  "postal": "760750",
+  "road": "YISHUN STREET 72"
+ },
+ "YIS07F": {
+  "postal": "760823",
+  "road": "YISHUN STREET 81"
+ },
+ "YIS10N": {
+  "postal": "761296",
+  "road": "YISHUN STREET 20"
+ },
+ "YIS11F": {
+  "postal": "761382",
+  "road": "YISHUN STREET 31"
+ },
+ "YIS13Q": {
+  "postal": "762510",
+  "road": "YISHUN STREET 51"
+ },
+ "YIS15U": {
+  "postal": "761470",
+  "road": "YISHUN STREET 42"
+ },
+ "YIS16M": {
+  "postal": "760469",
+  "road": "YISHUN STREET 43"
+ },
+ "YIS17S": {
+  "postal": "761478",
+  "road": "YISHUN STREET 44"
+ },
+ "YOH00X": {
+  "postal": "162011",
+  "road": "YORK HILL"
+ },
+ "YOS00D": {
+  "postal": "163078",
+  "road": "YONG SIAK STREET"
+ },
+ "YUA01W": {
+  "postal": "610364",
+  "road": "YUNG AN ROAD"
+ },
+ "YUC00G": {
+  "postal": "610139",
+  "road": "YUAN CHING ROAD"
+ },
+ "YUH00N": {
+  "postal": "610153",
+  "road": "YUNG HO ROAD"
+ },
+ "YUK00D": {
+  "postal": "610164",
+  "road": "YUNG KUANG ROAD"
+ },
+ "YUL00C": {
+  "postal": "610158",
+  "road": "YUNG LOH ROAD"
+ },
+ "YUP00Y": {
+  "postal": "611163",
+  "road": "YUNG PING ROAD"
+ },
+ "YUS00D": {
+  "postal": "610184",
+  "road": "YUNG SHENG ROAD"
+ },
+ "ZIO00W": {
+  "postal": "160087",
+  "road": "ZION ROAD"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "generatedAt": "2026-10-21T14:06:10.793Z",
+ "sources": [
+  {
+   "id": "d_17f5382f26140b1fdae0ba2ef6239d2f",
+   "name": "HDB Property Information",
+   "lastUpdatedAt": "2026-10-08T10:40:09+08:00",
+   "pageUrl": "https://data.gov.sg/datasets/d_17f5382f26140b1fdae0ba2ef6239d2f/view"
+  },
+  {
+   "id": "d_16b157c52ed637edd6ba1232e026258d",
+   "name": "HDB Existing Building",
+   "lastUpdatedAt": "2026-06-21T10:07:14+08:00",
+   "pageUrl": "https://data.gov.sg/datasets/d_16b157c52ed637edd6ba1232e026258d/view"
+  }
+ ],
+ "residentialBlocks": 10817,
+ "locatedBlocks": 10817,
+ "unmatched": []
+}
