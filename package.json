@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "leaflet": "^1.9.4",
+    "pdfjs-dist": "^6.4.299",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
@@ -23,11 +24,12 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/coverage-v8": "^4.1.12",
+    "fake-indexeddb": "^6.2.6",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vite": "^8.3.5",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.12"
   }
 }

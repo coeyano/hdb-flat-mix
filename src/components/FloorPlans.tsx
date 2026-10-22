@@ -46,6 +46,11 @@ export function FloorPlans({ block }: { block: Block }) {
           : "no flat models are recorded for this block, so there are no typical-layout links."}
       </p>
       <p className="mt-4 text-sm leading-relaxed text-ink-2">
+        <strong className="font-medium text-ink">Your plans:</strong> after buying a plan, use “Attach plan” next to its
+        model above to see it on this card. It’s saved only in this browser on this device, never uploaded, so other
+        people won’t see it.
+      </p>
+      <p className="mt-4 text-sm leading-relaxed text-ink-2">
         <strong className="font-medium text-ink">Exact plan:</strong> HDB sells the official plan of any flat online for
         about S$5 (Singpass and a credit card needed). Flats of the same model in one block usually share a layout, so one
         plan per model is often enough.

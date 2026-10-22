@@ -16,6 +16,11 @@ export function Footer({ meta }: { meta: DataMeta | null }) {
               Flat models and floor areas come from HDB resale records since 1990. They show which models a block has,
               not how many units of each, and are missing for blocks that have never been resold.
             </li>
+            <li>
+              Floor plans you attach are saved only in your browser on your device. They are never uploaded or shared.
+              Clearing this site’s data removes them, and Safari may clear them after a few weeks without a visit, so
+              keep your original files.
+            </li>
             <li>Covers HDB residential blocks only. Private condominiums, ECs and landed homes are not included.</li>
             <li>
               Counts follow HDB’s published dataset, which may lag recent completions, redevelopment (e.g. SERS) and

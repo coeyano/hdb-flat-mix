@@ -5,6 +5,10 @@ import { formatArea, labelModel } from "../lib/models";
 import { FloorPlans } from "./FloorPlans";
 import { MixBar } from "./MixBar";
 import { LayoutLink, ModelChip } from "./ModelLinks";
+import { AttachPlan } from "./plans/AttachPlan";
+import { PlanItem } from "./plans/PlanItem";
+import type { SavedPlan } from "../lib/plans/planStore";
+import { useBlockPlans } from "../lib/plans/usePlans";
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
@@ -15,7 +19,24 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
-function ModelLine({ m }: { m: BlockModel }) {
+function SavedPlans({ plans }: { plans: readonly SavedPlan[] }) {
+  if (!plans.length) return null;
+  return (
+    <div className="mt-1.5 basis-full space-y-1.5">
+      {plans.map((p) => (
+        <PlanItem key={p.id} plan={p} />
+      ))}
+    </div>
+  );
+}
+
+interface LineProps {
+  m: BlockModel;
+  blockId: string;
+  plans: readonly SavedPlan[];
+}
+
+function ModelLine({ m, blockId, plans }: LineProps) {
   const label = labelModel(m.type, m.model);
   return (
     <li className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm">
@@ -25,7 +46,11 @@ function ModelLine({ m }: { m: BlockModel }) {
       <span className="tabular text-xs text-muted">
         · {fmt(m.sales)} {m.sales === 1 ? "resale" : "resales"}
       </span>
-      <LayoutLink type={m.type} model={m.model} className="ml-auto" />
+      <span className="ml-auto flex flex-wrap items-center gap-x-3">
+        <LayoutLink type={m.type} model={m.model} />
+        <AttachPlan blockId={blockId} slot={`${m.type}|${m.model}`} label={label.code ?? label.short} />
+      </span>
+      <SavedPlans plans={plans} />
     </li>
   );
 }
@@ -34,6 +59,13 @@ export function BlockCard({ block }: { block: Block }) {
   const rows = FLAT_TYPES.map((t, i) => ({ t, n: block.counts[i], models: block.models.filter((m) => m.type === i) }));
   const present = rows.filter((r) => r.n > 0 || r.models.length > 0);
   const absent = rows.filter((r) => r.n === 0 && r.models.length === 0);
+  const { plans, error: planError } = useBlockPlans(block.id);
+  const plansFor = (slot: string) => plans.filter((p) => p.slot === slot);
+  // Plans saved against a model this block no longer lists (e.g. after a data refresh).
+  const slots = new Set(
+    present.flatMap((r) => (r.models.length ? r.models.map((m) => `${m.type}|${m.model}`) : [`${FLAT_TYPES.indexOf(r.t)}|`])),
+  );
+  const otherPlans = plans.filter((p) => !slots.has(p.slot));
 
   return (
     <article className="rounded-2xl border border-line bg-surface p-5 sm:p-7">
@@ -76,21 +108,34 @@ export function BlockCard({ block }: { block: Block }) {
               {models.length > 0 ? (
                 <ul className="mt-2 space-y-1.5">
                   {models.map((m) => (
-                    <ModelLine key={m.model} m={m} />
+                    <ModelLine key={m.model} m={m} blockId={block.id} plans={plansFor(`${m.type}|${m.model}`)} />
                   ))}
                 </ul>
               ) : (
-                <p className="mt-1 text-xs text-muted">
-                  {t.group === "rental"
-                    ? "Rental flats aren't sold, so HDB records no model."
-                    : t.key === "studio"
-                      ? "Studio apartments aren't in the resale records."
-                      : "Model not recorded: no resales since 1990."}
-                </p>
+                <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+                  <p className="text-xs text-muted">
+                    {t.group === "rental"
+                      ? "Rental flats aren't sold, so HDB records no model."
+                      : t.key === "studio"
+                        ? "Studio apartments aren't in the resale records."
+                        : "Model not recorded: no resales since 1990."}
+                  </p>
+                  <span className="ml-auto">
+                    <AttachPlan blockId={block.id} slot={`${FLAT_TYPES.indexOf(t)}|`} label={t.label} />
+                  </span>
+                  <SavedPlans plans={plansFor(`${FLAT_TYPES.indexOf(t)}|`)} />
+                </div>
               )}
             </li>
           ))}
         </ul>
+        {otherPlans.length > 0 && (
+          <div className="mt-3">
+            <p className="text-xs text-muted">Your other plans for this block:</p>
+            <SavedPlans plans={otherPlans} />
+          </div>
+        )}
+        {planError && <p className="mt-2 text-xs text-ink-2">Saved plans can’t be shown: {planError}</p>}
         {absent.length > 0 && (
           <p className="mt-2 text-xs text-muted">Not in this block: {absent.map((r) => r.t.label).join(", ")}.</p>
         )}

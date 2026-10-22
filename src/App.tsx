@@ -4,6 +4,7 @@ import { BlockCard } from "./components/BlockCard";
 import { Footer } from "./components/Footer";
 import { MapView } from "./components/MapView";
 import { ModelGuide } from "./components/ModelGuide";
+import { MyPlans } from "./components/plans/MyPlans";
 import { SearchBox } from "./components/SearchBox";
 import type { Block } from "./lib/blocks";
 import type { BlockIndex } from "./lib/search";
@@ -56,6 +57,13 @@ function SingleLookup({ index }: { index: BlockIndex }) {
           or type a street name such as “Marsiling Rd”.
         </p>
       )}
+      <MyPlans
+        index={index}
+        onOpen={(b) => {
+          select(b);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      />
     </div>
   );
 }

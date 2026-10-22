@@ -28,6 +28,10 @@ The app does not include floor plans. Each flat model has a free "Typical layout
 
 For the exact plan of a particular flat, HDB sells it through its [Purchase of Residential Floor Plan e-service](https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain) (about S$5, Singpass needed), and each block card links to it. Those plans are HDB copyright, so keep purchased plans for your own study and don't add them to this repository, which is public.
 
+### Attaching floor plans you own
+
+On each block card, "Attach plan" next to a flat model saves a floor plan the student has bought (PDF, PNG, JPEG, WebP or GIF, up to 25 MB) and shows it inline. Files are stored only in that browser's IndexedDB on that device: nothing is uploaded, and the built site's Content Security Policy blocks the page from sending data to any other server. Files are checked by their contents and saved with the matching type. PDFs are drawn with pdf.js, which loads only when a PDF is first shown. "Your saved floor plans" on the Single block tab lists every saved plan. Clearing site data removes them, and Safari may clear them after weeks without a visit, so students should keep their original files.
+
 If a refresh prints "new model names to add to src/lib/flatModels.ts", HDB has introduced a new model; it still shows in the app under its raw name, and adding it to that file gives it a tidy name and code.
 
 ## Run it on your computer
