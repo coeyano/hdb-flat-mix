@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Block } from "../lib/blocks";
 import { titleCase } from "../lib/format";
 import { labelModel } from "../lib/models";
+import { planForModel } from "./TypicalPlan";
 
 // HDB's "Purchase of Residential Floor Plan" e-service (Singpass login, about S$5 per plan).
 export const FLOOR_PLAN_SERVICE_URL = "https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain";
@@ -40,10 +41,12 @@ export function FloorPlans({ block }: { block: Block }) {
     <section className="mt-7 rounded-xl bg-plane p-4 sm:p-5">
       <h3 className="text-sm font-semibold">Floor plans</h3>
       <p className="mt-1.5 text-sm leading-relaxed text-ink-2">
-        <strong className="font-medium text-ink">Free:</strong>{" "}
-        {models.length > 0
-          ? "use the “Typical layouts” link next to each model above. These are image searches, so results come from other websites and can include similar models; check the code and size."
-          : "no flat models are recorded for this block, so there are no typical-layout links."}
+        <strong className="font-medium text-ink">Typical plans:</strong>{" "}
+        {models.some((m) => planForModel(m.type, m.model))
+          ? "shown above for each model, from HDB’s own annual reports and its 1985 book Housing a Nation. They show the standard design; units in this block can differ, for example corner units."
+          : models.length > 0
+            ? "HDB’s published plans in this app cover models built up to the late 1980s, which doesn’t include this block’s. Use the “Typical layouts” search next to each model."
+            : "no flat models are recorded for this block."}
       </p>
       <p className="mt-4 text-sm leading-relaxed text-ink-2">
         <strong className="font-medium text-ink">Your plans:</strong> after buying a plan, use “Attach plan” next to its
@@ -82,8 +85,8 @@ export function FloorPlans({ block }: { block: Block }) {
         </svg>
       </a>
       <p className="mt-3 text-xs leading-relaxed text-muted">
-        HDB may ask for a unit number; any flat of the same model in this block should do. Plans are HDB copyright: use
-        them for your own study, but don’t republish them.
+        HDB may ask for a unit number; any flat of the same model in this block should do. Plans you buy from HDB are
+        HDB copyright: use them for your own study, but don’t republish them.
       </p>
     </section>
   );

@@ -9,8 +9,9 @@ export function Footer({ meta }: { meta: DataMeta | null }) {
           <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-muted">About this data</h2>
           <ul className="space-y-2 leading-relaxed">
             <li>
-              Shows the <strong className="font-medium text-ink">number</strong> of each flat type in a block. It does{" "}
-              <strong className="font-medium text-ink">not</strong> show unit floor plans or layouts.
+              Shows the <strong className="font-medium text-ink">number</strong> of each flat type in a block, and HDB’s{" "}
+              <strong className="font-medium text-ink">typical</strong> plan of each model, not the exact layout of any
+              particular unit.
             </li>
             <li>
               Flat models and floor areas come from HDB resale records since 1990. They show which models a block has,
@@ -44,6 +45,15 @@ export function Footer({ meta }: { meta: DataMeta | null }) {
                 OneMap
               </a>{" "}
               <span className="text-muted">— Singapore Land Authority: base map, and street names for postal codes</span>
+            </li>
+            <li>
+              <a href="https://commons.wikimedia.org/wiki/Category:Mycommunitysg" target="_blank" rel="noopener" className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
+                HDB typical floor plans
+              </a>{" "}
+              <span className="text-muted">
+                — HDB Annual Reports 1972–75, 1980/81 and 1983/84, and Housing a Nation (HDB, 1985); scanned by My
+                Community SG, via Wikimedia Commons (CC0 / CC BY 4.0)
+              </span>
             </li>
             <li>
               <a href="https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain" target="_blank" rel="noopener" className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent">

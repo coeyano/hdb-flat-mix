@@ -9,6 +9,7 @@ import { AttachPlan } from "./plans/AttachPlan";
 import { PlanItem } from "./plans/PlanItem";
 import type { SavedPlan } from "../lib/plans/planStore";
 import { useBlockPlans } from "../lib/plans/usePlans";
+import { planForModel, TypicalPlanFigure } from "./TypicalPlan";
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
@@ -38,6 +39,7 @@ interface LineProps {
 
 function ModelLine({ m, blockId, plans }: LineProps) {
   const label = labelModel(m.type, m.model);
+  const typical = planForModel(m.type, m.model);
   return (
     <li className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm">
       {label.code ? <ModelChip code={label.code} /> : null}
@@ -47,9 +49,10 @@ function ModelLine({ m, blockId, plans }: LineProps) {
         · {fmt(m.sales)} {m.sales === 1 ? "resale" : "resales"}
       </span>
       <span className="ml-auto flex flex-wrap items-center gap-x-3">
-        <LayoutLink type={m.type} model={m.model} />
+        {!typical && <LayoutLink type={m.type} model={m.model} />}
         <AttachPlan blockId={blockId} slot={`${m.type}|${m.model}`} label={label.code ?? label.short} />
       </span>
+      {typical && <TypicalPlanFigure plan={typical} />}
       <SavedPlans plans={plans} />
     </li>
   );

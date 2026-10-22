@@ -24,7 +24,15 @@ Each run prints the match rate and writes `reports/join-report.md` and `reports/
 
 HDB's block dataset only gives counts per flat type. Flat models (Improved, New Generation, Model A and so on) and floor areas come from HDB's resale records since 1990: about 989,000 sales, 98% of which match a current block. They cover about 88% of sold flat types (about 91% of units). They show which models a block has, not how many units of each, and blocks that have never been resold have none.
 
-The app does not include floor plans. Each flat model has a free "Typical layouts" link: an image search (Bing) for that model's plans, worded so that "New Generation" doesn't match 3-Generation flats. Results come from other websites, so they can include similar models. No free site offers one page per model that could be linked instead, and the main collection (Teoalida, now housingmap.sg) sits behind a bot check. The Flat models tab also links Stacked Homes' illustrated history of HDB layouts.
+#### HDB typical plans
+
+Each flat model built up to the late 1980s (1I, 2STD, 2I, 3STD, 3I, 3NG, 3A, 3S, 4I, 4NG, 4A, 4S, 5STD, 5I, 5A, 5A Maisonette, EA, EM) shows HDB's own typical plan on the block card. The plans come from HDB Annual Reports 1972–75, 1980/81 and 1983/84 and HDB's 1985 book *Housing a Nation*, scanned by the heritage group My Community SG and published on Wikimedia Commons as CC0 or CC BY 4.0. The list, with page numbers and crops, is in `src/lib/typicalPlans.ts`. `npm run fetch-plans` downloads them into `public/plans/` and stops if a file's Commons licence has changed.
+
+Note on rights: the licences are the uploader's, who owns printed copies rather than HDB's copyright, and Commons holds no record of HDB's permission. The app credits HDB and My Community SG on every plan. If this matters for your use, ask My Community SG how the rights were cleared, or ask HDB.
+
+Later models (Premium Apartment, DBSS, Model A2 and so on) have no published HDB plan in these scans, so they get a "Typical layouts" link instead: an image search (Bing) worded so that "New Generation" doesn't match 3-Generation flats. Its results come from other websites and can include similar models. The Flat models tab also links Stacked Homes' illustrated history of HDB layouts.
+
+Other sources checked: Teoalida's housingmap.sg has redrawn plans for most blocks, but blocks automated access and offers no per-block links. HDB's Flat Portal shows the official plan of each flat currently listed for resale. SRX, 99.co and PropertyGuru have per-block plan pages addressed by their own IDs.
 
 For the exact plan of a particular flat, HDB sells it through its [Purchase of Residential Floor Plan e-service](https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain) (about S$5, Singpass needed), and each block card links to it. Those plans are HDB copyright, so keep purchased plans for your own study and don't add them to this repository, which is public.
 

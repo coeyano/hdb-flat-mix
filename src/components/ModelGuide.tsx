@@ -4,9 +4,27 @@ import { FLAT_TYPES } from "../lib/flatTypes";
 import { fmt } from "../lib/format";
 import { buildModelGuide, LAYOUT_HISTORY_URL } from "../lib/models";
 import { LayoutLink, ModelChip } from "./ModelLinks";
+import { planForModel, planImageUrl } from "./TypicalPlan";
 import { FLOOR_PLAN_SERVICE_URL } from "./FloorPlans";
 
 const range = (a: number, b: number, unit = "") => (a === b ? `${a}${unit}` : `${a}–${b}${unit}`);
+
+function PlanCell({ type, model }: { type: number; model: string }) {
+  const plan = planForModel(type, model);
+  if (!plan) return <LayoutLink type={type} model={model} />;
+  return (
+    <a
+      href={planImageUrl(plan)}
+      target="_blank"
+      rel="noopener"
+      title={`${plan.label} (${plan.source.title})`}
+      aria-label={`HDB plan: ${plan.label}, opens in a new tab`}
+      className="text-xs font-medium text-accent hover:text-accent-strong"
+    >
+      HDB plan
+    </a>
+  );
+}
 
 /** Reference table of every flat model, summarised from the blocks that have it. */
 export function ModelGuide({ blocks }: { blocks: readonly Block[] }) {
@@ -26,8 +44,9 @@ export function ModelGuide({ blocks }: { blocks: readonly Block[] }) {
           left out.
         </p>
         <p>
-          Each row links to an image search of that model’s typical layouts. For an illustrated history of layouts by
-          era, see{" "}
+          Rows marked “HDB plan” open HDB’s own typical plan for that model, from its annual reports and the 1985 book
+          Housing a Nation, scanned by My Community SG and published on Wikimedia Commons. Later models link to an image
+          search instead. For an illustrated history of layouts by era, see{" "}
           <a href={LAYOUT_HISTORY_URL} target="_blank" rel="noopener" className="text-accent hover:text-accent-strong">
             Stacked Homes’ guide
           </a>
@@ -65,8 +84,8 @@ export function ModelGuide({ blocks }: { blocks: readonly Block[] }) {
                 </td>
                 <td className="tabular whitespace-nowrap px-3 py-2 text-right">{range(g.yearFrom, g.yearTo)}</td>
                 <td className="tabular px-3 py-2 text-right">{fmt(g.blocks)}</td>
-                <td className="px-4 py-2">
-                  <LayoutLink type={g.type} model={g.model} />
+                <td className="whitespace-nowrap px-4 py-2">
+                  <PlanCell type={g.type} model={g.model} />
                 </td>
               </tr>
             ))}
