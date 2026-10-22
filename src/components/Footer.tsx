@@ -4,7 +4,7 @@ import type { DataMeta } from "../lib/useData";
 export function Footer({ meta }: { meta: DataMeta | null }) {
   return (
     <footer className="mt-20 border-t border-line">
-      <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 text-sm text-ink-2 sm:grid-cols-2 sm:px-6">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 text-sm text-ink-2 sm:grid-cols-2 sm:px-6">
         <section>
           <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-muted">About this data</h2>
           <ul className="space-y-2 leading-relaxed">

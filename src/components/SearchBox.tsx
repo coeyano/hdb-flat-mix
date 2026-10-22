@@ -1,4 +1,4 @@
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import type { Block } from "../lib/blocks";
 import { townName } from "../lib/flatTypes";
 import { formatAddress } from "../lib/format";
@@ -7,20 +7,30 @@ import { type BlockIndex, searchBlocks } from "../lib/search";
 interface Props {
   index: BlockIndex;
   onSelect: (block: Block) => void;
+  selected?: Block | null; // when chosen elsewhere (e.g. on the map), show it in the box
 }
 
-export function SearchBox({ index, onSelect }: Props) {
-  const [query, setQuery] = useState("");
+const labelFor = (b: Block) => formatAddress(b.blk, b.street).replace(/^Blk /, "");
+
+export function SearchBox({ index, onSelect, selected }: Props) {
+  const [query, setQuery] = useState(() => (selected ? labelFor(selected) : ""));
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const listId = useId();
+
+  const hadSelection = useRef(false);
+  useEffect(() => {
+    if (selected) setQuery(labelFor(selected));
+    else if (hadSelection.current) setQuery(""); // selection cleared (e.g. the link's # removed)
+    hadSelection.current = !!selected;
+  }, [selected]);
 
   const results = useMemo(() => searchBlocks(index, query), [index, query]);
   const showList = open && query.trim().length > 0;
 
   const choose = (block: Block) => {
     onSelect(block);
-    setQuery(formatAddress(block.blk, block.street).replace(/^Blk /, ""));
+    setQuery(labelFor(block));
     setOpen(false);
   };
 

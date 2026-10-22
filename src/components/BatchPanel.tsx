@@ -6,7 +6,8 @@ import { fmt } from "../lib/format";
 import type { BlockIndex, ResolvedEntry } from "../lib/search";
 import { BlockCard } from "./BlockCard";
 import { applyFilter, EMPTY_FILTER, EstateFilter, type FilterState } from "./EstateFilter";
-import { MapView } from "./MapView";
+import { useColourBy } from "../lib/useColourBy";
+import { BlockMap } from "./BlockMap";
 import { MixBar } from "./MixBar";
 import { PasteList } from "./PasteList";
 import { ResultsTable } from "./ResultsTable";
@@ -27,6 +28,7 @@ export function BatchPanel({ index }: { index: BlockIndex }) {
   const [filter, setFilter] = useState<FilterState>(EMPTY_FILTER);
   const [entries, setEntries] = useState<ResolvedEntry[]>([]);
   const [selected, setSelected] = useState<Block | null>(null);
+  const [colourBy, setColourBy] = useColourBy();
 
   const results = useMemo(() => {
     if (mode === "filter") return applyFilter(index.blocks, filter);
@@ -113,7 +115,16 @@ export function BatchPanel({ index }: { index: BlockIndex }) {
             <MixBar counts={totals.counts} />
           </div>
 
-          <MapView blocks={results} selectedId={selectedInResults?.id} onSelect={setSelected} />
+          <div className="h-[22rem] sm:h-[28rem]">
+            <BlockMap
+              blocks={results}
+              selected={selectedInResults}
+              onSelect={setSelected}
+              colourBy={colourBy}
+              onColourByChange={setColourBy}
+              fitToBlocks
+            />
+          </div>
 
           {selectedInResults && (
             <div ref={cardRef} className="relative scroll-mt-4">

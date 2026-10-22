@@ -2,6 +2,8 @@
 
 A small static website that shows how many of each flat type (1-room to Executive, Multi-generation, Studio and rental) are in any HDB block in Singapore, and which flat models (e.g. 3NG, 4A, EA) and floor areas each block has. You can look up one block at a time, or a whole estate at once in a table you can sort, filter, map and download.
 
+The **Explore** tab is map-first: every HDB block is a dot you can click, coloured by its main flat type or by the year it was built (older blocks are darker), and the block's card opens alongside. A **Reading list** tab collects public sources on HDB planning, renewal, demographics, car-lite and ageing-in-place strategies, and height controls.
+
 It uses only free public data and has no backend. All data is bundled as JSON files in `public/data/`.
 
 ## Data sources
@@ -111,6 +113,10 @@ The included workflow (`.github/workflows/deploy.yml`) runs the tests before eac
 1. Run `npm run fetch-data`.
 2. In GitHub Desktop, write a short summary (for example "Refresh HDB data"), click **Commit to main**, then **Push origin**.
 3. Vercel or GitHub Pages rebuilds the site within a minute or two.
+
+## Reading list
+
+The list is in `src/lib/readingList.ts`. When it was added (October 2026), HDB, SingStat and CAAS had reorganised their websites: moved pages point to their current addresses, and pages no longer online point to an Internet Archive copy (marked "Archived copy" in the app). Re-check the links each semester.
 
 ## Caveats (also shown in the app)
 
