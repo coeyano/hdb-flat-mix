@@ -4,6 +4,7 @@ import { fmt, formatAddress } from "../lib/format";
 import { formatArea, labelModel } from "../lib/models";
 import { FloorPlans } from "./FloorPlans";
 import { MixBar } from "./MixBar";
+import { LayoutLink, ModelChip } from "./ModelLinks";
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
@@ -11,14 +12,6 @@ function Stat({ label, value }: { label: string; value: string }) {
       <dt className="text-xs text-muted">{label}</dt>
       <dd className="tabular mt-0.5 text-lg font-medium">{value}</dd>
     </div>
-  );
-}
-
-export function ModelChip({ code }: { code: string }) {
-  return (
-    <span className="tabular inline-flex min-w-11 justify-center rounded-md bg-accent-soft px-1.5 py-0.5 text-xs font-semibold text-accent-strong">
-      {code}
-    </span>
   );
 }
 
@@ -32,6 +25,7 @@ function ModelLine({ m }: { m: BlockModel }) {
       <span className="tabular text-xs text-muted">
         · {fmt(m.sales)} {m.sales === 1 ? "resale" : "resales"}
       </span>
+      <LayoutLink type={m.type} model={m.model} className="ml-auto" />
     </li>
   );
 }

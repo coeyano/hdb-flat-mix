@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Block } from "./blocks";
 import { isKnownModel, modelCode, modelId, modelInfo, resaleTypeKey } from "./flatModels";
-import { buildModelGuide, formatArea, labelModel, modelCodes, modelKey } from "./models";
+import { buildModelGuide, formatArea, labelModel, layoutSearchUrl, modelCodes, modelKey } from "./models";
 
 describe("flatModels", () => {
   it("maps resale model names to ids in any case", () => {
@@ -76,5 +76,23 @@ describe("buildModelGuide", () => {
     expect(guide.map((g) => g.label.short)).toEqual(["3NG", "4NG", "5-room Adjoined flat"]);
     expect(guide[0]).toMatchObject({ blocks: 2, sales: 15, areaMedian: 68, yearFrom: 1975, yearTo: 1979 });
     expect(guide[1]).toMatchObject({ blocks: 1, areaLow: 92, areaHigh: 92 });
+  });
+});
+
+describe("layoutSearchUrl", () => {
+  const query = (url: string) => new URL(url).searchParams.get("q");
+
+  it("searches for the quoted model name, flat type and code", () => {
+    expect(query(layoutSearchUrl(2, "NG"))).toBe('"New Generation" HDB 3-room floor plan 3NG');
+    expect(query(layoutSearchUrl(5, "M"))).toBe('"Maisonette" HDB Executive floor plan EM');
+  });
+
+  it("omits the code when a model has none", () => {
+    expect(query(layoutSearchUrl(4, "ADJ"))).toBe('"Adjoined flat" HDB 5-room floor plan');
+  });
+
+  it("uses a plain query when the model has no real name", () => {
+    expect(query(layoutSearchUrl(1, "2R"))).toBe("HDB 2-room flat floor plan");
+    expect(query(layoutSearchUrl(6, "MG"))).toBe("HDB Multi-generation flat floor plan");
   });
 });

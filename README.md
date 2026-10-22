@@ -24,7 +24,9 @@ Each run prints the match rate and writes `reports/join-report.md` and `reports/
 
 HDB's block dataset only gives counts per flat type. Flat models (Improved, New Generation, Model A and so on) and floor areas come from HDB's resale records since 1990: about 989,000 sales, 98% of which match a current block. They cover about 88% of sold flat types (about 91% of units). They show which models a block has, not how many units of each, and blocks that have never been resold have none.
 
-The app does not include floor plans. HDB sells the plan of any flat through its [Purchase of Residential Floor Plan e-service](https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain) (about S$5, Singpass needed), and each block card links to it. Those plans are HDB copyright, so keep purchased plans for your own study and don't add them to this repository, which is public.
+The app does not include floor plans. Each flat model has a free "Typical layouts" link: an image search (Bing) for that model's plans, worded so that "New Generation" doesn't match 3-Generation flats. Results come from other websites, so they can include similar models. No free site offers one page per model that could be linked instead, and the main collection (Teoalida, now housingmap.sg) sits behind a bot check. The Flat models tab also links Stacked Homes' illustrated history of HDB layouts.
+
+For the exact plan of a particular flat, HDB sells it through its [Purchase of Residential Floor Plan e-service](https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain) (about S$5, Singpass needed), and each block card links to it. Those plans are HDB copyright, so keep purchased plans for your own study and don't add them to this repository, which is public.
 
 If a refresh prints "new model names to add to src/lib/flatModels.ts", HDB has introduced a new model; it still shows in the app under its raw name, and adding it to that file gives it a tidy name and code.
 

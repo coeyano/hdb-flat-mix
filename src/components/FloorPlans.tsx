@@ -34,17 +34,21 @@ function CopyButton({ text }: { text: string }) {
 
 export function FloorPlans({ block }: { block: Block }) {
   const address = `Blk ${block.blk} ${titleCase(block.street)}${block.postal ? `, Singapore ${block.postal}` : ""}`;
-  const models = block.models.map((m) => {
-    const label = labelModel(m.type, m.model);
-    return `${label.code ? `${label.code} · ` : ""}${label.name}`;
-  });
+  const models = block.models.map((m) => ({ ...m, label: labelModel(m.type, m.model) }));
 
   return (
     <section className="mt-7 rounded-xl bg-plane p-4 sm:p-5">
       <h3 className="text-sm font-semibold">Floor plans</h3>
       <p className="mt-1.5 text-sm leading-relaxed text-ink-2">
-        HDB sells the official plan of any flat online for about S$5 (Singpass and a credit card needed). Flats of the
-        same model in one block usually share a layout, so one plan per model is often enough.
+        <strong className="font-medium text-ink">Free:</strong>{" "}
+        {models.length > 0
+          ? "use the “Typical layouts” link next to each model above. These are image searches, so results come from other websites and can include similar models; check the code and size."
+          : "no flat models are recorded for this block, so there are no typical-layout links."}
+      </p>
+      <p className="mt-4 text-sm leading-relaxed text-ink-2">
+        <strong className="font-medium text-ink">Exact plan:</strong> HDB sells the official plan of any flat online for
+        about S$5 (Singpass and a credit card needed). Flats of the same model in one block usually share a layout, so one
+        plan per model is often enough.
       </p>
       <dl className="mt-3 space-y-1.5 text-sm">
         <div className="flex items-baseline gap-3">
@@ -55,7 +59,9 @@ export function FloorPlans({ block }: { block: Block }) {
         {models.length > 0 && (
           <div className="flex items-baseline gap-3">
             <dt className="w-16 shrink-0 text-xs text-muted">Models</dt>
-            <dd className="flex-1">{models.join("; ")}</dd>
+            <dd className="flex-1">
+              {models.map((m) => (m.label.code ? `${m.label.code} · ${m.label.name}` : m.label.short)).join("; ")}
+            </dd>
           </div>
         )}
       </dl>

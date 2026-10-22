@@ -84,3 +84,24 @@ export function buildModelGuide(blocks: readonly Block[]): GuideEntry[] {
     })
     .sort((a, b) => a.type - b.type || a.yearFrom - b.yearFrom || b.blocks - a.blocks);
 }
+
+const IMAGE_SEARCH_URL = "https://www.bing.com/images/search";
+
+/**
+ * Free image search for typical layouts of a flat type + model, e.g.
+ * "New Generation" HDB 3-room floor plan 3NG. The quoted model name and code keep
+ * "New Generation" from matching 3-Generation flats.
+ */
+export function layoutSearchUrl(type: number, model: string): string {
+  const typeLabel = FLAT_TYPES[type]?.label ?? "";
+  const label = labelModel(type, model);
+  const query =
+    model === "2R" || label.name === typeLabel
+      ? `HDB ${typeLabel} flat floor plan`
+      : `"${label.name}" HDB ${typeLabel} floor plan${label.code ? ` ${label.code}` : ""}`;
+  return `${IMAGE_SEARCH_URL}?q=${encodeURIComponent(query)}`;
+}
+
+// Free illustrated history of HDB layouts by era (Stacked Homes).
+export const LAYOUT_HISTORY_URL =
+  "https://stackedhomes.com/editorial/the-evolution-of-hdb-floor-plans-over-the-years-for-better-or-worse";
