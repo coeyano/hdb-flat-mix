@@ -1,5 +1,18 @@
 import { FLAT_TYPES, type MixGroup } from "./flatTypes";
 
+/** A flat model seen in a block's resale records, e.g. 3-room New Generation. */
+export interface BlockModel {
+  type: number; // index into FLAT_TYPES
+  model: string; // flat model id (see flatModels.ts)
+  sales: number; // resales recorded since 1990
+  areaMin: number; // floor area, m²
+  areaMax: number;
+  areaMedian: number;
+}
+
+// Compact on-disk model: [type, model, sales, areaMin, areaMax, areaMedian]
+export type BlockModelRow = [number, string, number, number, number, number];
+
 export interface Block {
   id: string; // "blk|street"
   blk: string;
@@ -12,10 +25,11 @@ export interface Block {
   postal: string | null;
   lat: number | null;
   lng: number | null;
+  models: readonly BlockModel[];
 }
 
-// Compact on-disk row: [blk, street, town, year, maxFloor, units, ...counts, postal, lat, lng]
-export type BlockRow = (string | number | null)[];
+// Compact on-disk row: [blk, street, town, year, maxFloor, units, ...counts, postal, lat, lng, models]
+export type BlockRow = (string | number | null | BlockModelRow[])[];
 
 export const ROW_FIELDS = [
   "blk",
@@ -28,6 +42,7 @@ export const ROW_FIELDS = [
   "postal",
   "lat",
   "lng",
+  "models",
 ] as const;
 
 export interface BlocksFile {
@@ -36,15 +51,24 @@ export interface BlocksFile {
 }
 
 export function encodeBlock(b: Block): BlockRow {
-  return [b.blk, b.street, b.town, b.year, b.maxFloor, b.units, ...b.counts, b.postal, b.lat, b.lng];
+  const models = b.models.map((m): BlockModelRow => [m.type, m.model, m.sales, m.areaMin, m.areaMax, m.areaMedian]);
+  return [b.blk, b.street, b.town, b.year, b.maxFloor, b.units, ...b.counts, b.postal, b.lat, b.lng, models];
 }
 
 export function decodeRow(row: BlockRow): Block {
   const n = FLAT_TYPES.length;
   const [blk, street, town, year, maxFloor, units] = row as [string, string, string, number, number, number];
   const counts = row.slice(6, 6 + n).map(Number);
-  const [postal, lat, lng] = row.slice(6 + n) as [string | null, number | null, number | null];
-  return { id: `${blk}|${street}`, blk, street, town, year, maxFloor, units, counts, postal, lat, lng };
+  const [postal, lat, lng, modelRows] = row.slice(6 + n) as [string | null, number | null, number | null, BlockModelRow[] | undefined];
+  const models = (modelRows ?? []).map(([type, model, sales, areaMin, areaMax, areaMedian]) => ({
+    type,
+    model,
+    sales,
+    areaMin,
+    areaMax,
+    areaMedian,
+  }));
+  return { id: `${blk}|${street}`, blk, street, town, year, maxFloor, units, counts, postal, lat, lng, models };
 }
 
 export function decodeFile(file: BlocksFile): Block[] {

@@ -189,6 +189,7 @@ export function joinBlocks(
       postal: loc?.postal ?? null,
       lat: loc?.lat ?? null,
       lng: loc?.lng ?? null,
+      models: [],
     };
     blocks.push(block);
     if (!loc) unmatched.push(block);

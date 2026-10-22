@@ -53,3 +53,12 @@ export async function downloadDataset(id: string): Promise<string> {
   }
   throw new Error(`Download of ${id} was not ready after polling`);
 }
+
+/** Dataset ids in a data.gov.sg collection, e.g. the five Resale Flat Prices periods. */
+export async function fetchCollectionDatasetIds(collectionId: string): Promise<{ name: string; lastUpdatedAt: string; ids: string[] }> {
+  const data = await getJson<{ collectionMetadata: { name: string; lastUpdatedAt: string; childDatasets: string[] } }>(
+    `${METADATA_URL.replace("/datasets", "/collections")}/${collectionId}/metadata`,
+  );
+  const c = data.collectionMetadata;
+  return { name: c.name, lastUpdatedAt: c.lastUpdatedAt, ids: c.childDatasets };
+}

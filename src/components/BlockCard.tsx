@@ -1,6 +1,8 @@
-import type { Block } from "../lib/blocks";
+import type { Block, BlockModel } from "../lib/blocks";
 import { FLAT_TYPES, townName } from "../lib/flatTypes";
 import { fmt, formatAddress } from "../lib/format";
+import { formatArea, labelModel } from "../lib/models";
+import { FloorPlans } from "./FloorPlans";
 import { MixBar } from "./MixBar";
 
 function Stat({ label, value }: { label: string; value: string }) {
@@ -12,9 +14,32 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
+export function ModelChip({ code }: { code: string }) {
+  return (
+    <span className="tabular inline-flex min-w-11 justify-center rounded-md bg-accent-soft px-1.5 py-0.5 text-xs font-semibold text-accent-strong">
+      {code}
+    </span>
+  );
+}
+
+function ModelLine({ m }: { m: BlockModel }) {
+  const label = labelModel(m.type, m.model);
+  return (
+    <li className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm">
+      {label.code ? <ModelChip code={label.code} /> : null}
+      <span className="font-medium">{label.name}</span>
+      <span className="tabular text-ink-2">{formatArea(m)}</span>
+      <span className="tabular text-xs text-muted">
+        · {fmt(m.sales)} {m.sales === 1 ? "resale" : "resales"}
+      </span>
+    </li>
+  );
+}
+
 export function BlockCard({ block }: { block: Block }) {
-  const sold = FLAT_TYPES.map((t, i) => ({ t, n: block.counts[i] })).filter((x) => x.t.group !== "rental");
-  const rental = FLAT_TYPES.map((t, i) => ({ t, n: block.counts[i] })).filter((x) => x.t.group === "rental");
+  const rows = FLAT_TYPES.map((t, i) => ({ t, n: block.counts[i], models: block.models.filter((m) => m.type === i) }));
+  const present = rows.filter((r) => r.n > 0 || r.models.length > 0);
+  const absent = rows.filter((r) => r.n === 0 && r.models.length === 0);
 
   return (
     <article className="rounded-2xl border border-line bg-surface p-5 sm:p-7">
@@ -37,26 +62,53 @@ export function BlockCard({ block }: { block: Block }) {
         <MixBar counts={block.counts} />
       </section>
 
-      <section className="mt-6 grid gap-6 sm:grid-cols-2">
-        <TypeList title="Sold flats" items={sold} />
-        <TypeList title="Rental flats" items={rental} />
+      <section className="mt-7">
+        <h3 className="mb-1 text-xs font-medium uppercase tracking-wide text-muted">Flat types and models</h3>
+        <ul className="divide-y divide-line">
+          {present.map(({ t, n, models }) => (
+            <li key={t.key} className="py-3">
+              <div className="flex items-baseline justify-between gap-4">
+                <span className="font-medium">{t.label}</span>
+                <span className="tabular text-sm">
+                  <span className="font-semibold">{fmt(n)}</span> <span className="text-muted">{n === 1 ? "unit" : "units"}</span>
+                </span>
+              </div>
+              {n === 0 && models.length > 0 && (
+                <p className="mt-1 text-xs text-muted">
+                  HDB’s block data lists no units of this type, but resale records show some existed (they may have
+                  been merged or converted).
+                </p>
+              )}
+              {models.length > 0 ? (
+                <ul className="mt-2 space-y-1.5">
+                  {models.map((m) => (
+                    <ModelLine key={m.model} m={m} />
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-1 text-xs text-muted">
+                  {t.group === "rental"
+                    ? "Rental flats aren't sold, so HDB records no model."
+                    : t.key === "studio"
+                      ? "Studio apartments aren't in the resale records."
+                      : "Model not recorded: no resales since 1990."}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+        {absent.length > 0 && (
+          <p className="mt-2 text-xs text-muted">Not in this block: {absent.map((r) => r.t.label).join(", ")}.</p>
+        )}
+        {block.models.length > 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            Models and floor areas come from resale records since 1990. They show which models exist here, not how many
+            units of each.
+          </p>
+        )}
       </section>
-    </article>
-  );
-}
 
-function TypeList({ title, items }: { title: string; items: { t: (typeof FLAT_TYPES)[number]; n: number }[] }) {
-  return (
-    <div>
-      <h3 className="mb-2 text-xs font-medium uppercase tracking-wide text-muted">{title}</h3>
-      <dl className="divide-y divide-line">
-        {items.map(({ t, n }) => (
-          <div key={t.key} className={`flex justify-between py-1.5 text-sm ${n ? "" : "text-muted"}`}>
-            <dt>{t.label}</dt>
-            <dd className={`tabular ${n ? "font-medium" : ""}`}>{fmt(n)}</dd>
-          </div>
-        ))}
-      </dl>
-    </div>
+      <FloorPlans block={block} />
+    </article>
   );
 }

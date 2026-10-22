@@ -3,12 +3,13 @@ import { BatchPanel } from "./components/BatchPanel";
 import { BlockCard } from "./components/BlockCard";
 import { Footer } from "./components/Footer";
 import { MapView } from "./components/MapView";
+import { ModelGuide } from "./components/ModelGuide";
 import { SearchBox } from "./components/SearchBox";
 import type { Block } from "./lib/blocks";
 import type { BlockIndex } from "./lib/search";
 import { useData } from "./lib/useData";
 
-type Tab = "single" | "batch";
+type Tab = "single" | "batch" | "models";
 
 /** The URL hash remembers the open block (#730001 or #1|MARSILING DR) so a lookup can be shared. */
 function blockFromHash(index: BlockIndex): Block | null {
@@ -82,6 +83,7 @@ export default function App() {
             [
               ["single", "Single block"],
               ["batch", "Batch & estate"],
+              ["models", "Flat models"],
             ] as const
           ).map(([key, label]) => (
             <button
@@ -109,6 +111,9 @@ export default function App() {
             </div>
             <div hidden={tab !== "batch"}>
               <BatchPanel index={data.index} />
+            </div>
+            <div hidden={tab !== "models"}>
+              <ModelGuide blocks={data.blocks} />
             </div>
           </>
         )}

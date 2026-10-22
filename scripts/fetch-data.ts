@@ -5,8 +5,9 @@
  *    HDB Existing Building (postal code + outline per block) from data.gov.sg.
  * 2. Resolves each building's street code (ST_COD) to an HDB street name via OneMap,
  *    cached in scripts/cache so later runs only look up new codes.
- * 3. Joins the two on block + street, looks up any leftovers on OneMap,
- *    and writes public/data/*.json plus a match report in reports/.
+ * 3. Joins the two on block + street and looks up any leftovers on OneMap.
+ * 4. Adds flat models and floor areas from HDB's resale records (1990 onwards).
+ * 5. Writes public/data/*.json plus a match report in reports/.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -14,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import { encodeBlock, ROW_FIELDS, type Block } from "../src/lib/blocks";
 import { townName } from "../src/lib/flatTypes";
 import { blockKey, normaliseBlock, normalisePostal, normaliseStreet, STREET_EXPANSIONS } from "../src/lib/street";
-import { downloadDataset, fetchMetadata } from "./lib/datagov";
+import { downloadDataset, fetchCollectionDatasetIds, fetchMetadata, type DatasetMeta } from "./lib/datagov";
 import {
   blocksByStreet,
   buildingsFromGeoJson,
@@ -26,9 +27,11 @@ import {
   type PropertyRow,
 } from "./lib/join";
 import { oneMapSearch } from "./lib/onemap";
+import { attachModels, emptySummary, findOverlaps, monthRange, summariseResales, type ModelStats, type ResaleSummary } from "./lib/resale";
 
 const PROPERTY_ID = "d_17f5382f26140b1fdae0ba2ef6239d2f";
 const BUILDINGS_ID = "d_16b157c52ed637edd6ba1232e026258d";
+const RESALE_COLLECTION = "189"; // Resale Flat Prices, 1990 onwards, split across several datasets
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CACHE_DIR = path.join(root, "scripts", "cache");
@@ -150,6 +153,8 @@ function writeReports(
   unusedBuildings: Building[],
   streetInfo: ReturnType<typeof resolveStreetCodes>,
   viaOneMap: number,
+  modelStats: ModelStats,
+  resale: ResaleSummary,
 ) {
   const located = blocks.length - unmatched.length;
   const lines = [
@@ -165,6 +170,14 @@ function writeReports(
     `- Building outlines not linked to a residential block: ${unusedBuildings.length} (mostly non-residential, e.g. carparks and shops)`,
     `- Street codes resolved by block overlap instead of OneMap: ${streetInfo.viaOverlap.length}`,
     `- Street codes not resolved: ${streetInfo.unresolved.length}`,
+    "",
+    "## Flat models (from resale records)",
+    "",
+    `- Resale records read: ${resale.sales} (${resale.skipped} skipped for missing type, model or area)`,
+    `- Records matched to a current block: ${modelStats.matchedSales} (the rest are mostly demolished blocks)`,
+    `- Blocks with at least one known model: ${modelStats.blocksWithModels} of ${modelStats.blocksWithSoldFlats} blocks with sold flats (${pct(modelStats.blocksWithModels, modelStats.blocksWithSoldFlats)})`,
+    `- Sold flat types with a known model: ${modelStats.slotsWithModel} of ${modelStats.soldSlots} (${pct(modelStats.slotsWithModel, modelStats.soldSlots)})`,
+    `- Unrecognised model names (shown as-is in the app): ${[...resale.unknownModels].join(", ") || "none"}`,
     "",
     "## Unmatched residential blocks",
     "",
@@ -189,52 +202,87 @@ function writeReports(
   );
 }
 
+async function readResales(): Promise<{ summary: ResaleSummary; meta: DatasetMeta }> {
+  const collection = await fetchCollectionDatasetIds(RESALE_COLLECTION);
+  const summary = emptySummary();
+  const ranges: { name: string; from: string; to: string }[] = [];
+  for (const id of collection.ids) {
+    const meta = await fetchMetadata(id);
+    const rows = parseCsv(await downloadDataset(id));
+    summariseResales(rows, summary);
+    const range = monthRange(rows);
+    if (range) ranges.push({ name: meta.name, ...range });
+    console.log(`  ${meta.name}: ${rows.length} records${range ? ` (${range.from} to ${range.to})` : ""}`);
+  }
+  const overlaps = findOverlaps(ranges);
+  if (overlaps.length) {
+    throw new Error(`Resale datasets overlap, so sales would be double-counted: ${overlaps.join("; ")}. Check the collection on data.gov.sg.`);
+  }
+  return {
+    summary,
+    meta: {
+      id: `collection-${RESALE_COLLECTION}`,
+      name: collection.name,
+      lastUpdatedAt: collection.lastUpdatedAt,
+      pageUrl: `https://data.gov.sg/collections/${RESALE_COLLECTION}/view`,
+    },
+  };
+}
+
 async function main() {
-  console.log("1/5 Reading dataset metadata…");
+  console.log("1/6 Reading dataset metadata…");
   const propertyMeta = await fetchMetadata(PROPERTY_ID);
   const buildingsMeta = await fetchMetadata(BUILDINGS_ID);
   console.log(`  ${propertyMeta.name}: last updated ${propertyMeta.lastUpdatedAt}`);
   console.log(`  ${buildingsMeta.name}: last updated ${buildingsMeta.lastUpdatedAt}`);
 
-  console.log("2/5 Downloading HDB Property Information…");
+  console.log("2/6 Downloading HDB Property Information…");
   const rows = parseCsv(await downloadDataset(PROPERTY_ID));
   const required = ["blk_no", "street", "residential", "year_completed", "total_dwelling_units", "bldg_contract_town"];
   const missingCols = required.filter((c) => !(c in (rows[0] ?? {})));
   if (missingCols.length) throw new Error(`Property dataset is missing columns: ${missingCols.join(", ")}. HDB may have changed the schema.`);
   console.log(`  ${rows.length} rows`);
 
-  console.log("3/5 Downloading HDB Existing Building (≈57 MB)…");
+  console.log("3/6 Downloading HDB Existing Building (≈57 MB)…");
   const buildings = buildingsFromGeoJson(JSON.parse(await downloadDataset(BUILDINGS_ID)));
   console.log(`  ${buildings.length} building outlines`);
 
-  console.log("4/5 Resolving street codes and joining…");
+  console.log("4/6 Resolving street codes and joining…");
   const cache = await lookUpStreetCodes(buildings);
   const streetInfo = resolveStreetCodes(buildings, cache, rows);
   const firstPass = joinBlocks(rows, buildings, streetInfo.streetCodes);
   const extra = await lookUpMissingBlocks(firstPass.unmatched);
-  const { blocks, unmatched, unusedBuildings } = joinBlocks(rows, buildings, streetInfo.streetCodes, extra);
+  const joined = joinBlocks(rows, buildings, streetInfo.streetCodes, extra);
+  const { unmatched, unusedBuildings } = joined;
   const viaOneMap = firstPass.unmatched.length - unmatched.length;
 
-  console.log("5/5 Writing files…");
+  console.log("5/6 Downloading resale records for flat models and floor areas (≈85 MB)…");
+  const resale = await readResales();
+  const { blocks, stats: modelStats } = attachModels(joined.blocks, resale.summary);
+
+  console.log("6/6 Writing files…");
   writeJson(path.join(DATA_DIR, "blocks.json"), { fields: ROW_FIELDS, rows: blocks.map(encodeBlock) });
   writeJson(
     path.join(DATA_DIR, "meta.json"),
     {
       generatedAt: new Date().toISOString(),
-      sources: [propertyMeta, buildingsMeta],
+      sources: [propertyMeta, buildingsMeta, resale.meta],
       residentialBlocks: blocks.length,
       locatedBlocks: blocks.length - unmatched.length,
+      blocksWithModels: modelStats.blocksWithModels,
       unmatched: unmatched.map((b) => `${b.blk} ${b.street}`),
     },
     true,
   );
-  writeReports(blocks, unmatched, unusedBuildings, streetInfo, viaOneMap);
+  writeReports(blocks, unmatched, unusedBuildings, streetInfo, viaOneMap, modelStats, resale.summary);
 
   const located = blocks.length - unmatched.length;
   console.log("");
   console.log(`Join match rate: ${located}/${blocks.length} residential blocks (${pct(located, blocks.length)})`);
   console.log(`  via building outlines: ${located - viaOneMap}, via OneMap block search: ${viaOneMap}`);
   console.log(`  street codes: ${Object.values(streetInfo.streetCodes).filter(Boolean).length} resolved, ${streetInfo.viaOverlap.length} by overlap, ${streetInfo.unresolved.length} unresolved`);
+  console.log(`Flat models: ${modelStats.slotsWithModel}/${modelStats.soldSlots} sold flat types (${pct(modelStats.slotsWithModel, modelStats.soldSlots)}) in ${modelStats.blocksWithModels} blocks`);
+  if (resale.summary.unknownModels.size) console.log(`  new model names to add to src/lib/flatModels.ts: ${[...resale.summary.unknownModels].join(", ")}`);
   if (unmatched.length) {
     console.log(`Unmatched (${unmatched.length}):`);
     for (const b of unmatched) console.log(`  ${b.blk} ${b.street} (${townName(b.town)}, ${b.year})`);

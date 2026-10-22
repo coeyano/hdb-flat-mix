@@ -32,6 +32,19 @@ describe("bundled data", () => {
     expect(searchBlocks(index, "marsiling road").every((b) => b.street === "MARSILING RD")).toBe(true);
   });
 
+  it("has flat models for most sold flat types", () => {
+    expect(blocks.filter((b) => b.models.length).length / blocks.length).toBeGreaterThan(0.85);
+    const shunfu = index.byKey.get("306|SHUNFU RD")!;
+    expect(shunfu.models.map((m) => m.model)).toEqual(["NG", "NG"]);
+    const marsiling1 = index.byKey.get("1|MARSILING DR")!;
+    expect(marsiling1.models[0]).toMatchObject({ type: 2, model: "I" });
+  });
+
+  it("has plausible floor areas (HDB terrace houses reach ~370 m²)", () => {
+    const odd = blocks.flatMap((b) => b.models).filter((m) => m.areaMin < 20 || m.areaMax > 400 || m.areaMin > m.areaMedian);
+    expect(odd).toEqual([]);
+  });
+
   it("finds the 1970s Marsiling blocks in Woodlands", () => {
     const marsiling = blocks.filter((b) => b.town === "WL" && b.street.startsWith("MARSILING")).map((b) => b.street);
     const seventies = applyFilter(blocks, { ...EMPTY_FILTER, town: "WL", streets: [...new Set(marsiling)], yearFrom: "1970", yearTo: "1979" });

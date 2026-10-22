@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T14:06:10.793Z",
+ "generatedAt": "2026-10-22T01:17:19.532Z",
  "sources": [
   {
    "id": "d_17f5382f26140b1fdae0ba2ef6239d2f",
@@ -12,9 +12,16 @@
    "name": "HDB Existing Building",
    "lastUpdatedAt": "2026-06-21T10:07:14+08:00",
    "pageUrl": "https://data.gov.sg/datasets/d_16b157c52ed637edd6ba1232e026258d/view"
+  },
+  {
+   "id": "collection-189",
+   "name": "Resale Flat Prices",
+   "lastUpdatedAt": "2026-10-22T02:10:17+08:00",
+   "pageUrl": "https://data.gov.sg/collections/189/view"
   }
  ],
  "residentialBlocks": 10817,
  "locatedBlocks": 10817,
+ "blocksWithModels": 9820,
  "unmatched": []
 }

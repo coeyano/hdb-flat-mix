@@ -1,6 +1,6 @@
 # HDB Flat Mix
 
-A small static website that shows how many of each flat type (1-room to Executive, Multi-generation, Studio and rental) are in any HDB block in Singapore. You can look up one block at a time, or a whole estate at once in a table you can sort, map and download.
+A small static website that shows how many of each flat type (1-room to Executive, Multi-generation, Studio and rental) are in any HDB block in Singapore, and which flat models (e.g. 3NG, 4A, EA) and floor areas each block has. You can look up one block at a time, or a whole estate at once in a table you can sort, filter, map and download.
 
 It uses only free public data and has no backend. All data is bundled as JSON files in `public/data/`.
 
@@ -10,6 +10,7 @@ It uses only free public data and has no backend. All data is bundled as JSON fi
 |---|---|---|
 | HDB Property Information | Flat-type counts, year completed and max floor level for each block (block no. + street, no postal codes) | [data.gov.sg](https://data.gov.sg/datasets/d_17f5382f26140b1fdae0ba2ef6239d2f/view) |
 | HDB Existing Building | Postal code, street code and building outline for each block | [data.gov.sg](https://data.gov.sg/datasets/d_16b157c52ed637edd6ba1232e026258d/view) |
+| Resale Flat Prices (5 datasets, 1990 onwards) | Flat model and floor area of every resold flat, used to show each block's models | [data.gov.sg](https://data.gov.sg/collections/189/view) |
 | OneMap search API | Turns each street code into a street name; finds new blocks missing from the outlines | [onemap.gov.sg](https://www.onemap.gov.sg/apidocs/) |
 | OneMap base map | Map tiles | [onemap.gov.sg](https://www.onemap.gov.sg/) |
 
@@ -18,6 +19,14 @@ It uses only free public data and has no backend. All data is bundled as JSON fi
 The building dataset labels streets with codes (for example `MAD07G`), not names. The refresh script looks up one postal code per street code on OneMap to get the street name ("MARSILING DRIVE"). It then converts that name to HDB's abbreviations ("MARSILING DR") and joins the datasets on block + street. Blocks that are missing from the building outlines (usually ones completed after the outlines were last updated) are looked up on OneMap by address.
 
 Each run prints the match rate and writes `reports/join-report.md` and `reports/unmatched-blocks.csv`. The current run matched **10,817 of 10,817 residential blocks (100%)**: 10,766 via the building outlines and 51 brand-new 2026 blocks via OneMap.
+
+### Flat models and floor plans
+
+HDB's block dataset only gives counts per flat type. Flat models (Improved, New Generation, Model A and so on) and floor areas come from HDB's resale records since 1990: about 989,000 sales, 98% of which match a current block. They cover about 88% of sold flat types (about 91% of units). They show which models a block has, not how many units of each, and blocks that have never been resold have none.
+
+The app does not include floor plans. HDB sells the plan of any flat through its [Purchase of Residential Floor Plan e-service](https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain) (about S$5, Singpass needed), and each block card links to it. Those plans are HDB copyright, so keep purchased plans for your own study and don't add them to this repository, which is public.
+
+If a refresh prints "new model names to add to src/lib/flatModels.ts", HDB has introduced a new model; it still shows in the app under its raw name, and adding it to that file gives it a tidy name and code.
 
 ## Run it on your computer
 
@@ -41,7 +50,7 @@ When HDB updates its datasets, run:
 npm run fetch-data
 ```
 
-This downloads both datasets again and rebuilds `public/data/`. It takes about 2 minutes. Street-code lookups are cached in `scripts/cache/`, so only new street codes or new blocks are looked up on OneMap. Then commit and push the changed files, and the site redeploys itself.
+This downloads all the datasets again (about 150 MB in total) and rebuilds `public/data/`. It takes about 5 minutes. Street-code lookups are cached in `scripts/cache/`, so only new street codes or new blocks are looked up on OneMap. Then commit and push the changed files, and the site redeploys itself.
 
 Optional settings, only needed if a service starts refusing requests:
 

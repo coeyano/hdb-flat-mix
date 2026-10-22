@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { type Block, compareBlockNo } from "../lib/blocks";
 import { FLAT_TYPES } from "../lib/flatTypes";
 import { fmt, titleCase } from "../lib/format";
+import { modelCodes } from "../lib/models";
 import { MixBar } from "./MixBar";
 
 interface Column {
@@ -18,6 +19,7 @@ const COLUMNS: readonly Column[] = [
   { key: "year", label: "Year", value: (b) => b.year, numeric: true },
   { key: "floors", label: "Floors", title: "Max floor level", value: (b) => b.maxFloor, numeric: true },
   { key: "units", label: "Units", title: "Total dwelling units", value: (b) => b.units, numeric: true },
+  { key: "models", label: "Models", title: "Flat models from resale records", value: (b) => modelCodes(b) },
   ...FLAT_TYPES.map((t, i) => ({ key: t.key, label: t.short, title: t.label, value: (b: Block) => b.counts[i], numeric: true })),
 ];
 
@@ -107,6 +109,7 @@ export function ResultsTable({ blocks, selectedId, onSelect }: Props) {
                 <td className="tabular px-3 py-2 text-right">{b.year || "—"}</td>
                 <td className="tabular px-3 py-2 text-right">{b.maxFloor || "—"}</td>
                 <td className="tabular px-3 py-2 text-right font-medium">{fmt(b.units)}</td>
+                <td className="min-w-28 max-w-56 px-3 py-2 text-xs leading-snug text-ink-2">{modelCodes(b) || <span className="text-[#c3c2b7]">—</span>}</td>
                 {b.counts.map((n, i) => (
                   <td key={FLAT_TYPES[i].key} className={`tabular px-3 py-2 text-right ${n ? "" : "text-[#c3c2b7]"}`}>
                     {n ? fmt(n) : "0"}

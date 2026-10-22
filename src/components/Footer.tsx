@@ -12,6 +12,10 @@ export function Footer({ meta }: { meta: DataMeta | null }) {
               Shows the <strong className="font-medium text-ink">number</strong> of each flat type in a block. It does{" "}
               <strong className="font-medium text-ink">not</strong> show unit floor plans or layouts.
             </li>
+            <li>
+              Flat models and floor areas come from HDB resale records since 1990. They show which models a block has,
+              not how many units of each, and are missing for blocks that have never been resold.
+            </li>
             <li>Covers HDB residential blocks only. Private condominiums, ECs and landed homes are not included.</li>
             <li>
               Counts follow HDB’s published dataset, which may lag recent completions, redevelopment (e.g. SERS) and
@@ -35,6 +39,12 @@ export function Footer({ meta }: { meta: DataMeta | null }) {
                 OneMap
               </a>{" "}
               <span className="text-muted">— Singapore Land Authority: base map, and street names for postal codes</span>
+            </li>
+            <li>
+              <a href="https://services2.hdb.gov.sg/webapp/BC31ISOP2/BC31SMain" target="_blank" rel="noopener" className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent">
+                HDB floor plan service
+              </a>{" "}
+              <span className="text-muted">— official floor plans, sold per flat (not included in this app)</span>
             </li>
             {meta && (
               <li className="text-muted">

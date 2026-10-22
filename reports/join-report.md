@@ -1,6 +1,6 @@
 # Join report
 
-Generated 2026-10-21T14:06:10.795Z
+Generated 2026-10-22T01:17:19.533Z
 
 - Residential blocks in HDB Property Information: **10817**
 - Matched to a postal code and location: **10817 (100.0%)**
@@ -10,6 +10,14 @@ Generated 2026-10-21T14:06:10.795Z
 - Building outlines not linked to a residential block: 2670 (mostly non-residential, e.g. carparks and shops)
 - Street codes resolved by block overlap instead of OneMap: 0
 - Street codes not resolved: 4
+
+## Flat models (from resale records)
+
+- Resale records read: 989492 (0 skipped for missing type, model or area)
+- Records matched to a current block: 972048 (the rest are mostly demolished blocks)
+- Blocks with at least one known model: 9820 of 10545 blocks with sold flats (93.1%)
+- Sold flat types with a known model: 17529 of 20028 (87.5%)
+- Unrecognised model names (shown as-is in the app): none
 
 ## Unmatched residential blocks
 

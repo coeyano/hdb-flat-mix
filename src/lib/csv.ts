@@ -1,6 +1,11 @@
 import type { Block } from "./blocks";
 import { dominantTypeLabel } from "./blocks";
 import { FLAT_TYPES, townName } from "./flatTypes";
+import { formatArea, labelModel } from "./models";
+
+const slug = (label: string) => label.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+// Types that can appear in resale records (not studio or rentals).
+const MODEL_TYPES = FLAT_TYPES.map((t, i) => ({ t, i })).filter(({ t }) => t.group !== "rental" && t.key !== "studio");
 
 const escapeCell = (v: string | number | null): string => {
   const s = v == null ? "" : String(v);
@@ -17,8 +22,9 @@ export const CSV_HEADER = [
   "year_completed",
   "max_floor_lvl",
   "total_dwelling_units",
-  ...FLAT_TYPES.map((t) => t.label.toLowerCase().replace(/[^a-z0-9]+/g, "_")),
+  ...FLAT_TYPES.map((t) => slug(t.label)),
   "dominant_flat_type",
+  ...MODEL_TYPES.flatMap(({ t }) => [`${slug(t.label)}_models`, `${slug(t.label)}_floor_area_sqm`]),
   "latitude",
   "longitude",
 ];
@@ -34,6 +40,13 @@ export function blocksToCsv(blocks: readonly Block[]): string {
     b.units,
     ...b.counts,
     dominantTypeLabel(b),
+    ...MODEL_TYPES.flatMap(({ i }) => {
+      const models = b.models.filter((m) => m.type === i);
+      return [
+        models.map((m) => labelModel(m.type, m.model)).map((l) => (l.code ? `${l.code} ${l.name}` : l.name)).join("; "),
+        models.map((m) => formatArea(m).replace(" m²", "")).join("; "),
+      ];
+    }),
     b.lat,
     b.lng,
   ]);

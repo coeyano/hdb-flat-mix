@@ -17,11 +17,19 @@ const block: Block = {
   postal: "730001",
   lat: 1.4407,
   lng: 103.7757,
+  models: [
+    { type: 2, model: "I", sales: 306, areaMin: 59, areaMax: 76, areaMedian: 65 },
+    { type: 4, model: "ADJ", sales: 1, areaMin: 151, areaMax: 151, areaMedian: 151 },
+  ],
 };
 
 describe("row encoding", () => {
-  it("round-trips a block", () => {
+  it("round-trips a block, including its models", () => {
     expect(decodeRow(encodeBlock(block))).toEqual(block);
+  });
+
+  it("reads rows written before models were added", () => {
+    expect(decodeRow(encodeBlock(block).slice(0, -1)).models).toEqual([]);
   });
 
   it("rejects a data file with a different field layout", () => {
@@ -57,7 +65,12 @@ describe("blocksToCsv", () => {
   it("writes a header and one row per block", () => {
     const lines = blocksToCsv([block]).trim().split("\r\n");
     expect(lines[0]).toBe(CSV_HEADER.join(","));
-    expect(lines[1]).toBe("1,MARSILING DR,Woodlands,730001,1973,11,159,0,0,158,0,1,0,0,0,0,0,0,0,3-room,1.4407,103.7757");
+    expect(lines[1]).toBe(
+      "1,MARSILING DR,Woodlands,730001,1973,11,159,0,0,158,0,1,0,0,0,0,0,0,0,3-room," +
+        ",,,,3I Improved,59–76,,,Adjoined flat,151,,,," +
+        ",1.4407,103.7757",
+    );
+    expect(lines[0]).toContain("3_room_models,3_room_floor_area_sqm");
   });
 
   it("quotes commas and neutralises formula-like cells", () => {
@@ -76,6 +89,11 @@ describe("applyFilter", () => {
 
   it("returns nothing until a town or street is chosen", () => {
     expect(applyFilter(all, EMPTY_FILTER)).toEqual([]);
+  });
+
+  it("filters by flat model", () => {
+    expect(applyFilter(all, { ...EMPTY_FILTER, town: "WL", models: ["2|I"] }).map((b) => b.blk)).toEqual(["1", "2"]);
+    expect(applyFilter(all, { ...EMPTY_FILTER, town: "WL", models: ["3|NG"] })).toEqual([]);
   });
 
   it("filters by town, street and year range", () => {

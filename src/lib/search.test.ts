@@ -15,6 +15,7 @@ const make = (blk: string, street: string, postal: string | null, town = "WL"): 
   postal,
   lat: 1.44,
   lng: 103.77,
+  models: [],
 });
 
 const blocks = [

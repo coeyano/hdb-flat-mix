@@ -19,6 +19,7 @@ const MARSILING_1970S: FilterState = {
   streets: ["MARSILING CRES", "MARSILING DR", "MARSILING LANE", "MARSILING RD", "MARSILING RISE"],
   yearFrom: "1970",
   yearTo: "1979",
+  models: [],
 };
 
 export function BatchPanel({ index }: { index: BlockIndex }) {
